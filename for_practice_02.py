@@ -12,6 +12,7 @@
 """
 import random
 
+#初始化
 coins = 0  # 记录金币数
 total = 0  # 记录两个骰子总数和
 count = 0  # 记录玩的局数
