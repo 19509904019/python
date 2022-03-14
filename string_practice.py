@@ -1,4 +1,13 @@
 '''
+Author: yujun
+Date: 2022-03-14 13:57:52
+LastEditors: yujun
+LastEditTime: 2022-03-14 14:00:47
+FilePath: \python_learning\string_practice.py
+Description: 
+
+'''
+'''
 https://i0.hdslb.com/bfs/face/37a0f4baf76199fea4607366ce223ae4105709bd.jpg@240w_240h_1c_1s.webp
 '''
 
