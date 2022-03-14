@@ -2,7 +2,7 @@
 Author: yujun
 Date: 2022-03-14 13:57:52
 LastEditors: yujun
-LastEditTime: 2022-03-14 14:00:47
+LastEditTime: 2022-03-14 14:23:26
 FilePath: \python_learning\string_practice.py
 Description: 
 
@@ -99,7 +99,7 @@ if file.endswith("jpg") or file.endswith("png") or file.endswith("gif"):
             #打印文件名
         print("文件名不符合要求，已重新加载，文件{0}{1}上传成功".format(filename,file[i:]))
     else:
-        print("文件{0}{1}上传成功".format(filename,file[i:]))
+        print("文件{}{}上传成功".format(filename,file[i:]))
 
 else:
     print("文件格式错误，上传失败！")
