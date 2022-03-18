@@ -1,0 +1,28 @@
+字符串：
+1.下标：
+0 ~ n-1
+n ~ -1
+s[-1],s[3] 
+
+2.切片：
+s[起始:终止:步长]
+步长可省略，默认为1
+
+3.字符串操作
+len,find,rfind,startswith,endswith,isalpha,isdigit...
+repalce(old,new,count)
+split('*')  #遇到 * 切一刀
+rsplit('*')
+strip()  lstrip()  rstrip()
+count
+join()
+format() 
+lower()  upper()  title()
+
+4.列表
+定义格式：
+list = []
+['aa','bb'...]
+[[],[],[]...]
+
+下标和切片：同字符串操作一样
