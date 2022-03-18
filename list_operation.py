@@ -74,6 +74,9 @@ pop(index):根据下标删除列表中的元素，下标在写的时候不要超
 remove(element):根据元素名称删除，元素要存在删除的列表当中
 如果列表中存在多个同名元素，只删除第一个元素，后面的元素不会被删除
 
+del 列表:直接删除地址空间
+del list[index]:删除某个元素
+
 关键字in: 元素 in 列表 
 '''
 list = ['面包', '辣条','辣条', '方便面', '火腿肠']
@@ -97,9 +100,9 @@ list = ['面包', '辣条','辣条', '方便面', '火腿肠']
 # print(list1)
 
 
-for string in range(list.count('辣条')):
-    list.remove('辣条')
-print(list)
+# for string in range(list.count('辣条')):
+#     list.remove('辣条')
+# print(list)
 #while循环用于不确定次数的循环
 ##第一种
 # while '辣条' in list:
@@ -120,4 +123,54 @@ print(list)
 insert(index,element)：按index插入元素
 replace(old,new,count):按原来的元素替换新元素
 index(element):根据元素找该元素的位置下标，返回值是下标
+clear():清空列表元素
 '''
+
+'''
+查找
+1.元素 in 列表   返回bool类型   （元素 not in 列表）
+2.列表.index(元素)  返回元素的下标位置，如果没有此元素则报错
+3.列表.count(元素)   返回整数  返回值是0则表示不存在此元素  存在则返回个数
+'''
+# list = [1,2,3,4]
+
+# list1 = list
+# list2 = list
+
+# #使用同一个空间地址，所以增加元素，三个列表一起增加
+# list.append(5)
+# print(list1)
+# print(list2)
+
+# #删除某一个列表时，只是减少了一个指针指向，并不影响其他列表的指向
+# del list
+# print(list1)
+# print(list2)
+
+
+'''
+排序
+sort:默认升序  可以通过reverse参数控制升序还是降序
+reverse:翻转
+'''
+
+#生成8个1-20之间的随机数，保存到列表中，遍历打印
+# import random
+
+# #存放随机数
+# numbers = []
+
+# for i in range(8):
+#     ran = random.randint(1,20)
+#     numbers.append(ran)
+
+# print(numbers)
+
+# #升序排列
+# numbers.sort(reverse = True)
+# print(numbers)
+
+# #reverse只是单纯的翻转
+# numbers.reverse()
+# print(numbers)
+
