@@ -31,9 +31,9 @@ int float str bool  list  ...
 # for i in index:
 #     list.append(list2[i])
 # print(list)
-# #跟上式等价
-# # list = [list2[i] for i in index]
-# # print(list)
+#跟上式等价
+# list = [list2[i] for i in index]
+# print(list)
 
 '''
 s = 'abc123'
