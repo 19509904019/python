@@ -64,18 +64,20 @@
 '''
 冒泡排序
 '''
+
 # 存放生成的随机数
 import random
 numbers = []
+# 生成随机数
 numbers = random.sample(range(1, 100), 8)
-print("生成的数据为：%s" % numbers)
+print("生成的随机数表为:%s" % numbers)
 
 # 冒泡排序法
-for i in range(0, len(numbers)-1):  # 控制排序的轮数  8位数最多进行7轮，最后一轮两位数只需对比一次
-    for j in range(0, len(numbers)-1-i):  # 两两交换的次数，每次一位数完成排序便不再移动
+for i in range(0, len(numbers) - 1):  # 控制外层循环，即循环的轮数,轮数为n-1
+    for j in range(0, len(numbers) - 1 - i):  # 控制内层循环，两两对比的次数，对比的次数为n-1-i,排好序的不用再排
         if numbers[j] > numbers[j+1]:
             # 交换
             temp = numbers[j]
             numbers[j] = numbers[j+1]
             numbers[j+1] = temp
-print("排序后的数据为：%s" % numbers)
+print("排序后的随机数表为:%s" % numbers)
