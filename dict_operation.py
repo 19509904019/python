@@ -58,15 +58,26 @@ for i in dict:
 
 获取字典中所有的key值：字典.keys()
 获取字典中所有的value值：字典.values()
+获取字典中所有的key值和value值：字典.items()
 
+
+字典中的合并不能用 + 
+可以用update()实现两个字典的合并
 '''
-#根据key得到value值  get不会报错
+# 根据key得到value值  get不会报错
 # value = dict.get('age')
 # print(value)
 
-
+# keys()
 for i in dict.keys():
     print(i)
-
+# values()
 for i in dict.values():
     print(i)
+# items()
+for i in dict.items():
+    print(i)
+# 把括号给去掉
+for i, j in dict.items():
+    print(i, j)
+
