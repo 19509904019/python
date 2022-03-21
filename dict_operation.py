@@ -40,7 +40,6 @@ popitem():返回值(key,value)  从后往前删内容
 # print(a)
 # print(dict)
 
-
 '''
 遍历和查询：
 列表：list.index()   list.count()    in 
