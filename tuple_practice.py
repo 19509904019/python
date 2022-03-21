@@ -180,7 +180,29 @@ while True:
 
     # 修改角色
     elif choice == '3':
-        pass
+        if len(all_role) != 0:
+            modify_name_before = input("请输入修改的角色名称：")
+            for role in all_role:
+                if modify_name_before in role:
+                    choice = input("1.名称 2.性别 3.职业 (请选择操作)：")
+                    if choice == '1':
+                        pass
+                    elif choice == '2':
+                        pass
+                    elif choice == '3':
+                        pass
+                    else:
+                        print("输入错误，请重新输入！")
+
+            else:
+                print("角色不存在！")
+            answer = input("是否继续修改(按q或者Q结束)：")
+            if answer.lower() == 'q':
+                print("退出成功！")
+                break
+        else:
+            print("角色列表为空！")
+            break
     
     # 查询单个角色
     elif choice == '4':
