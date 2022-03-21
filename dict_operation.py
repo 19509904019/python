@@ -58,7 +58,7 @@ for i in dict:
 
 获取字典中所有的key值：字典.keys()
 获取字典中所有的value值：字典.values()
-获取字典中所有的key值和value值：字典.items()
+获取字典中所有的key值和value值：字典.items()   返回元组
 
 
 字典中的合并不能用 + 
