@@ -27,7 +27,7 @@ book = {}
 # ]
 # print(books)
 
-#删除  出版社
+# 删除  出版社
 # for book in books:
 #     print(book)
 #     book.pop('出版社')
@@ -45,18 +45,6 @@ books = []  能放多本书
 '''
 # 存放书籍
 books = []
-#存放书籍信息
-book = {}
-while True:
-    bookname = input("请输入书名：")
-    bookwriter = input("请输入作者：")
-    bookprice = input("请输入价格：")
-    book['bookname'] = bookname
-    book['bookwrite'] = bookwriter
-    book['bookprice'] = bookprice
-    books.append(book)
-    print(books)
-    break
 
-
- 
+book = input().split(" ")  #用split()切割成列表
+print(book)
