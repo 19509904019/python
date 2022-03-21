@@ -12,7 +12,7 @@ while True:
 
     total += price * number
     sum += number
-    answer = input("当前的商品总额为%.2f,是否退出当前结算页面(按“q”键结束,”s“键继续):" % total)
+    answer = input("当前的商品总额为%.2f,是否退出当前结算页面(按“q”键结束,“s”键继续):" % total)
     if answer == 'q':
         break
 
