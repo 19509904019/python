@@ -88,8 +88,7 @@ while True:
                                 print("修改成功！")
                             else:
                                 print("输入错误，请重新输入！")
-                            answer = input(
-                                "是否继续修改角色{}信息(按q或者Q结束)：".format(modify_name_before))
+                            answer = input("是否继续修改角色{}信息(按q或者Q结束)：".format(modify_name_before))
                             if answer.lower() == 'q':
                                 print("退出成功！")
                                 break
@@ -113,8 +112,7 @@ while True:
                     if select_name in role:
                         print("{}{}{}".format('姓名'.ljust(5),
                               '性别'.ljust(5), '职业'.ljust(5)))
-                        print("{}{}{}".format(role[0].ljust(
-                            5), role[1].ljust(6), role[2].ljust(5)))
+                        print("{}{}{}".format(role[0].ljust(5), role[1].ljust(6), role[2].ljust(5)))
                         break
                 else:
                     print("角色不存在！")
@@ -133,8 +131,7 @@ while True:
             print()
             print("{}{}{}".format('姓名'.ljust(5), '性别'.ljust(5), '职业'.ljust(5)))
             for role in all_role:
-                print("{}{}{}".format(role[0].ljust(
-                    5), role[1].ljust(6), role[2].ljust(5)))
+                print("{}{}{}".format(role[0].ljust(5), role[1].ljust(6), role[2].ljust(5)))
         else:
             print("角色列表为空！")
 
