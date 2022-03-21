@@ -133,6 +133,7 @@ while True:
     # 选择操作
     choice = input("\n1.添加角色\n2.删除角色\n3.修改角色\n\
 4.查询单个角色\n5.查询所有角色\n6.退出系统\n请选择操作：")
+    
     # 添加角色
     if choice == '1':
         while True:
@@ -150,7 +151,32 @@ while True:
 
     # 删除角色
     elif choice == '2':
-        pass
+        while True:
+            #判断角色是否为空
+            if len(all_role)!=0:
+                delete_name = input("请输入删除角色名称：")
+                for role in all_role:
+                    if delete_name in role:
+                        answer = input("确定删除角色吗(y/n):")
+                        if answer.lower() == 'y':
+                            #删除角色
+                            all_role.remove(role)
+                            print("角色{}删除成功！".format(delete_name))
+                            break
+                        elif answer.lower() == 'n':
+                            print("取消成功！")
+                            break
+                        else:
+                            print("输入错误，请重新输入！")
+                else:
+                    print("角色不存在！")
+                answer = input("是否继续删除(按q或者Q结束)：")
+                if answer.lower() == 'q':
+                    print("退出成功！")
+                    break 
+            else:
+                print("角色列表为空！")
+                break
 
     # 修改角色
     elif choice == '3':
@@ -180,6 +206,9 @@ while True:
     # 查询所有角色
     elif choice == '5':
         if len(all_role) != 0:
+            print("正在查询...")
+            time.sleep(1)
+            print()
             print("{}{}{}".format('姓名'.ljust(5), '性别'.ljust(5), '职业'.ljust(5)))
             for role in all_role:
                 print("{}{}{}".format(role[0].ljust(
@@ -190,7 +219,7 @@ while True:
     # 退出系统
     elif choice == '6':
         print("正在退出系统...")
-        time.sleep(2)
+        time.sleep(1)
         print("退出成功！")
         break
     
