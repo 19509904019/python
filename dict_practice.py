@@ -45,6 +45,22 @@ books = []  能放多本书
 '''
 # 存放书籍
 books = []
+while True:
+    bookname = input("请输入书名：")
+    for book in books:
+        if bookname in book.get('bookname'):
+            print("书籍已存在，请重新输入！")
+            break
+    else:
+        bookwrite = input("请输入作者：")
+        bookprice = input("请输入价格：")
+        books.append(
+            {'bookname': bookname, 'bookwrite': bookwrite, 'bookprice': bookprice})
 
-book = input().split(" ")  #用split()切割成列表
-print(book)
+    if len(books) == 3:
+        print(books)
+        break
+
+
+# book = input().split(" ")  #用split()切割成列表
+# print(book)

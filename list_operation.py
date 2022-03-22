@@ -31,7 +31,7 @@ int float str bool  list  ...
 # for i in index:
 #     list.append(list2[i])
 # print(list)
-#跟上式等价
+# 跟上式等价
 # list = [list2[i] for i in index]
 # print(list)
 
@@ -79,7 +79,7 @@ del list[index]:删除某个元素
 
 关键字in: 元素 in 列表 
 '''
-list = ['面包', '辣条','辣条', '方便面', '火腿肠']
+list = ['面包', '辣条', '辣条', '方便面', '火腿肠']
 # # 判断元素是否在列表当中
 # if '辣条啊' in list:
 #     print("yes")
@@ -87,7 +87,7 @@ list = ['面包', '辣条','辣条', '方便面', '火腿肠']
 #     print("no")
 
 # for循环  删除重复元素要遍历list[:]
-#list和list[:]是两个不同的空间，所以删除和遍历会分别在两个列表进行
+# list和list[:]是两个不同的空间，所以删除和遍历会分别在两个列表进行
 # for string in list[:]:
 #     if string == '辣条':
 #         list.remove('辣条')
@@ -103,13 +103,13 @@ list = ['面包', '辣条','辣条', '方便面', '火腿肠']
 # for string in range(list.count('辣条')):
 #     list.remove('辣条')
 # print(list)
-#while循环用于不确定次数的循环
-##第一种
+# while循环用于不确定次数的循环
+# 第一种
 # while '辣条' in list:
 #     list.remove('辣条')
 # print(list)
 
-#第二种
+# 第二种
 # n = 0
 # while n < len(list):
 #     if list[n] == '辣条':
@@ -154,7 +154,7 @@ sort:默认升序  可以通过reverse参数控制升序还是降序
 reverse:翻转
 '''
 
-#生成8个1-20之间的随机数，保存到列表中，遍历打印
+# 生成8个1-20之间的随机数，保存到列表中，遍历打印
 # import random
 
 # #存放随机数
@@ -173,4 +173,3 @@ reverse:翻转
 # #reverse只是单纯的翻转
 # numbers.reverse()
 # print(numbers)
-
