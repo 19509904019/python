@@ -53,5 +53,6 @@ while len(all_code) < 5:
     for i in range(4):
         codes += string[random.randint(0, len(string)-1)]
     all_code.add(codes)
+    
 #打印输出
 print(all_code)
