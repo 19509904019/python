@@ -43,24 +43,42 @@ books = []  能放多本书
 1.添加书
   不能添加同名书籍
 '''
+# 111111
+# #存放书籍信息
+# books = []
+
+# while True:
+#     bookname = input("请输入书名：")
+#     for book in books:
+#         #判断是否已存在
+#         if bookname in book.values():
+#             print("书籍已存在，请重新输入！")
+#             break
+#     else:
+#         bookwrite = input("请输入作者：")
+#         bookprcice = input("请输入价格：")
+#         books.append({'bookname':bookname,'bookwrite':bookwrite,'bookprcice':bookprcice})
+#     #最多添加三本书
+#     if len(books) == 3:
+#         print(books)
+#         break
+
+
+# 2222
 # 存放书籍
 books = []
+
 while True:
-    bookname = input("请输入书名：")
+    msg = input("请依次输入书籍名称，作者，价格（以空格分隔）：").split(" ")
     for book in books:
-        if bookname in book.get('bookname'):
+        # 判断书籍是否已经存在
+        if msg[0] in book.get('bookname'):
             print("书籍已存在，请重新输入！")
             break
     else:
-        bookwrite = input("请输入作者：")
-        bookprice = input("请输入价格：")
         books.append(
-            {'bookname': bookname, 'bookwrite': bookwrite, 'bookprice': bookprice})
-
+            {'bookname': msg[0], 'bookwrite': msg[1], 'bookprice': msg[2]})
+    # 存放三本书
     if len(books) == 3:
         print(books)
         break
-
-
-# book = input().split(" ")  #用split()切割成列表
-# print(book)
