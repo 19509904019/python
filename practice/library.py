@@ -20,6 +20,7 @@ library = [{'bookname': '红楼梦', 'author': '曹雪芹', 'price': 88, 'number
            {'bookname': '红高粱', 'author': '莫言', 'price': 68, 'number': 2}]
 
 while True:
+    print()
     # 选择操作
     choice = input("1.借书\n2.还书\n3.查询\n4.查看所有\n5.退出\n请选择操作：")
     # 借书
