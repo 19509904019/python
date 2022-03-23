@@ -88,6 +88,8 @@ while True:
                     if bookname in book.values():
                         print(book)
                         break
+                else:
+                    print("查询不到此书名！")
             else:
                 print("输入错误，请重新输入！")
             # 判断是否继续
