@@ -70,7 +70,31 @@ while True:
                 break
     # 查询某本书籍
     elif choice == '3':
-        pass
+        while True:
+            choice = input("请按照以下方式查询：\n1.作者\n2.书名\n请选择：")
+            #按作者查询
+            if choice == '1':
+                author = input("请输入作者:")
+                for book in library:
+                    if author in book.values():
+                        print(book)
+                        break
+                else:
+                    print("查询不到此作者！") 
+            #按书名查询
+            elif choice == '2':
+                bookname = input("请输入书名:")
+                for book in library:
+                    if bookname in book.values():
+                        print(book)
+                        break
+            else:
+                print("输入错误，请重新输入！")
+            # 判断是否继续
+            answer = input("是否继续查询(q/Q结束):")
+            if answer.lower() == 'q':
+                print("退出成功！")
+                break      
     # 查询所有书籍
     elif choice == '4':
         if len(library) != 0:
