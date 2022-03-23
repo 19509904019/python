@@ -10,7 +10,7 @@ library = [{'bookname':'xxx','author':'xxx','price':100,'number':5},{},{},{},{}]
 5.退出  √
 
 '''
-import time 
+import time
 print("---------------欢迎进入图书馆管理系统---------------")
 # 书库
 library = [{'bookname': '红楼梦', 'author': '曹雪芹', 'price': 88, 'number': 5},
@@ -20,61 +20,65 @@ library = [{'bookname': '红楼梦', 'author': '曹雪芹', 'price': 88, 'number
            {'bookname': '红高粱', 'author': '莫言', 'price': 68, 'number': 2}]
 
 while True:
-    #选择操作
+    # 选择操作
     choice = input("1.借书\n2.还书\n3.查询\n4.查看所有\n5.退出\n请选择操作：")
-    #借书
+    # 借书
     if choice == '1':
         while True:
             bookname = input("请输入书名：")
             for book in library:
-                #判断是否存在
+                # 判断是否存在
                 if bookname in book.values():
-                    #书本数量
+                    # 书本数量
                     numbers = book['number']
-                    #判断是否剩余
+                    # 判断是否剩余
                     if numbers != 0:
                         print("借书成功！")
-                        #数量减少
+                        # 数量减少
                         numbers -= 1
                         book['number'] = numbers
-                        break 
+                        break
                     else:
                         print("此书已经借完！")
-                        break    
+                        break
             else:
                 print("此书不存在！")
-            #判断是否继续
+            # 判断是否继续
             answer = input("是否继续借书(q/Q结束):")
             if answer.lower() == 'q':
                 print("退出成功！")
                 break
-    #还书
+    # 还书
     elif choice == '2':
         while True:
             bookname = input("请输入书名:")
             for book in library:
-                #该书数量
+                # 该书数量
                 numbers = book['number']
                 if bookname in book.values():
                     print("还书成功！")
-                    #数量增加
+                    # 数量增加
                     numbers += 1
                     book['number'] = numbers
                     break
             else:
                 print("该书不是本图书馆所借！")
-            #判断是否继续
+            # 判断是否继续
             answer = input("是否继续还书(q/Q结束):")
             if answer.lower() == 'q':
                 print("退出成功！")
                 break
-    #查询某本书籍
+    # 查询某本书籍
     elif choice == '3':
         pass
-    #查询所有书籍
+    # 查询所有书籍
     elif choice == '4':
-        pass
-    #退出系统
+        if len(library) != 0:
+            for book in library:
+                print(book)
+        else:
+            print("图书为空！")
+    # 退出系统
     elif choice == '5':
         print("正在退出...")
         time.sleep(1)
