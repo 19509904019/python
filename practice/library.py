@@ -68,8 +68,10 @@ while True:
             if answer.lower() == 'q':
                 print("退出成功！")
                 break
+    #查询某本书籍
     elif choice == '3':
         pass
+    #查询所有书籍
     elif choice == '4':
         pass
     #退出系统
