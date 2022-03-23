@@ -50,7 +50,7 @@ while True:
             bookname = input("请输入书名:")
             for book in library:
                 # 判断是否存在
-                if bookname in book.values():
+                if bookname == book.get('bookname'):
                     # 书本数量
                     numbers = book['number']
                     # 判断是否剩余
@@ -77,7 +77,7 @@ while True:
             for book in library:
                 # 该书数量
                 numbers = book['number']
-                if bookname in book.values():
+                if bookname == book.get('bookname'):
                     print("还书成功！")
                     # 数量增加
                     numbers += 1
@@ -98,17 +98,21 @@ while True:
             if choice == '1':
                 author = input("请输入作者:")
                 for book in library:
-                    if author in book.values():
-                        print(book)
+                    if author == book.get('author'):
+                        print(
+                            f"书名：{book['bookname']}\t作者：{book['author']}\t价格：{book['price']}\t数量：{book['number']}")
                         break
                 else:
                     print("查询不到此作者！")
             # 按书名查询
             elif choice == '2':
                 bookname = input("请输入书名:")
+                # 此书是否存在
                 for book in library:
-                    if bookname in book.values():
-                        print(book)
+                    # 如果存在则打印
+                    if bookname == book.get('bookname'):
+                        print(
+                            f"书名：{book['bookname']}\t作者：{book['author']}\t价格：{book['price']}\t数量：{book['number']}")
                         break
                 else:
                     print("查询不到此书名！")
@@ -123,7 +127,8 @@ while True:
     elif choice == '4':
         if len(library) != 0:
             for book in library:
-                print(book)
+                print(
+                    f"书名：{book['bookname']}\t作者：{book['author']}\t价格：{book['price']}\t数量：{book['number']}")
         else:
             print("图书为空！")
     # 退出系统

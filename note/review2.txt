@@ -14,3 +14,39 @@ list -----> dict
 特殊要求：
 list1 = print(('a',1),('b',2),('c',3))
 print(dict(list1))
+
+
+
+内置方法：
+print():打印
+input():输入
+type():类型
+id():地址
+len():长度
+bin():二进制
+oct():八进制
+hex():十六进制
+
+del 变量名
+in 
+not in 
+is
+
+max():求最大值
+min():求最小值
+sum():求和
+abs():求绝对值
+
+sorted():系统排序方法
+sorted(reverse = True):倒序
+
+chr():给ASCII码值返回改值对应的字母
+result = chr(65)
+ord():给字母返回ASCII值
+result = ord('A')
+
+
+#符号 + - * &  |
+# + 支持字符串、列表、元组
+# * 字符串、列表、元组
+#-  &  | 只能在集合中使用
