@@ -1,0 +1,16 @@
+list:允许重复,有序  有下标
+tuple:允许重复，但是不允许修改，只能查看
+dict:键值对存在  键：唯一，值：允许重复{}
+set:不允许重复，无序{}
+
+类型转换：
+list ----> tuple,set(长度有可能发生改变)
+tuple -----> list,set
+set ------> list,tuple
+
+dict -----> list,tuple,set  但是只是将字典的键放到了[],(),{}
+
+list -----> dict
+特殊要求：
+list1 = print(('a',1),('b',2),('c',3))
+print(dict(list1))
