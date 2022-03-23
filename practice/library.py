@@ -19,14 +19,35 @@ library = [{'bookname': '红楼梦', 'author': '曹雪芹', 'price': 88, 'number
            {'bookname': '西游记', 'author': '吴承恩', 'price': 81, 'number': 5},
            {'bookname': '红高粱', 'author': '莫言', 'price': 68, 'number': 2}]
 
+# # 手动添加书籍
+# library = []
+# while True:
+#     print("")
+#     bookname = input("请输入书名:")
+#     for book in library:
+#         if bookname in book.values():
+#             print("此书已存在，请重新输入！")
+#             break
+#     else:
+#         author = input("请输入作者:")
+#         price = input("请输入价格:")
+#         number = int(input("请输入数量:"))
+#         library.append({'bookname': bookname, 'author': author,
+#                        'price': price, 'number': number})
+#     # 结束条件
+#     answer = input("是否继续添加书籍(q/Q结束):")
+#     if answer.lower() == 'q':
+#         print("退出成功！")
+#         break
+
+# 选择操作
 while True:
     print()
-    # 选择操作
-    choice = input("1.借书\n2.还书\n3.查询\n4.查看所有\n5.退出\n请选择操作：")
+    choice = input("1.借书\n2.还书\n3.查询\n4.查看所有\n5.退出\n请选择操作:")
     # 借书
     if choice == '1':
         while True:
-            bookname = input("请输入书名：")
+            bookname = input("请输入书名:")
             for book in library:
                 # 判断是否存在
                 if bookname in book.values():
@@ -72,8 +93,8 @@ while True:
     # 查询某本书籍
     elif choice == '3':
         while True:
-            choice = input("请按照以下方式查询：\n1.作者\n2.书名\n请选择：")
-            #按作者查询
+            choice = input("请按照以下方式查询：\n1.作者\n2.书名\n请选择:")
+            # 按作者查询
             if choice == '1':
                 author = input("请输入作者:")
                 for book in library:
@@ -81,8 +102,8 @@ while True:
                         print(book)
                         break
                 else:
-                    print("查询不到此作者！") 
-            #按书名查询
+                    print("查询不到此作者！")
+            # 按书名查询
             elif choice == '2':
                 bookname = input("请输入书名:")
                 for book in library:
@@ -97,7 +118,7 @@ while True:
             answer = input("是否继续查询(q/Q结束):")
             if answer.lower() == 'q':
                 print("退出成功！")
-                break      
+                break
     # 查询所有书籍
     elif choice == '4':
         if len(library) != 0:
