@@ -41,17 +41,26 @@
 #     for i in range(1,n+1):
 #         sum += i
 #     print(sum)
-
-
 # get_sum(100)
 
 
 '''
 (多个参数)
 定义一个出租车打车程序，参数：手机号码，起步价：10元
-函数体中输入乘车时间和里程数，2公里内起步价
-超出2公里每公里5元，乘车时间每分钟0.5元
+函数体中输入乘车时间和里程数，2公里内起步价,超出2公里每公里5元
+乘车时间每分钟0.5元
 下车打印总账单
 '''
 
 
+def take_taxi(phonenumbers, price):
+    time = float(input("请输入乘车时长(单位：分钟)："))
+    mileage = float(input("请输入里程数："))
+    if mileage > 2:
+        total = price + (mileage-2) * 5 + time * 0.5
+    else:
+        total = price + time * 0.5
+    #打印总账单
+    print(f"手机号为{phonenumbers}的乘客花费为{total}")
+
+take_taxi(13811114444,10)
