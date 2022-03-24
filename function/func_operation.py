@@ -18,6 +18,8 @@ def 函数名([参数, ....]):
 '''
 # 生成验证码
 import random
+
+from sympy import arg
 def generate_code():
     # 验证码字符
     strings = '0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'
@@ -85,4 +87,55 @@ def 函数名(参数1，参数2，参数3 = 值，参数4 = 值，...):
 1.在定义函数的时候，普通参数要位于默认值参数的前面
 2.默认参数的顺序是固定的，调用时使用关键字参数传值
 '''
+
+'''
+library = [书名1，书名2，...]
+
+def add_book(bookname):
+    pass
+
+def all_book(library):
+    pass
+
+依次调用
+'''
+
+
+'''
+可变参数:
+*args
+**kwargs
+
+拆包和装包
+函数装包：
+def 函数(*args):  -----> 此时会出现装包操作
+    pass
+函数(1,2,3,4)
+
+拆包：
+list,tuple,set
+调用的时候：
+函数(*list) | 函数(*tuple) |  函数(*set)   -----> 拆包
+
+'''
+# #求和
+# def get_sum(*args):
+#     # print(args)
+#     sum = ''
+#     for i in args:
+#         sum += i
+#     print(sum)
+
+# get_sum('a','b','c')
+
+'''
+可变参数：**kwargs
+关键字参数
+在函数调用的时候必须传递管家你参数，才可以将其转换成key:value
+将其转换到字典中
+'''
+def show_book(**kwargs):
+    print(kwargs)
+
+show_book()
 
