@@ -145,7 +145,56 @@ show_book(bookname = '红楼梦',author = '曹雪芹',price = 88)
 '''
 可变参数：
 *args  **kwargs
-
 arguments 
+'''
+
+'''
+参数：外界向里面传值
+返回值：里面的内容向外界传送
+
+def 函数名(参数，...):
+    ...
+    ...
+    return xxxx
+
+当函数调用时通过return向外返出值
+注意：只要函数有返回值，也可以是多个值
+
+return 后面的值可以是一个值，也可以是多个值
+如果是多个值 类似：return a,b,c  会将多个值封装到一个元组中
+将元组作为整体返回
+结果：(a,b,c)
+'''
+def get_num(*args):
+    total = 0
+    for i in args:
+        total += i
+    return total
+list = [i for i in range(1,101)]
+# print(list)
+total = get_num(*list)
+print(total)
+
+'''
+全局和局部变量：
+声明函数外面的称作全局变量
+声明函数内部的变量称作局部变量
+
+函数内部可以直接使用全局变量，但是不能直接修改全局变量
+如果想修改全局变量，则必须必须使用关键字：global 全局变量名
+'''
+
+'''
+全局和局部变量：
+global关键字的添加：
+只有不可变的类型才需要添加global
+可变的类型不需要添加global
+
+
+可变与不可变：
+不可变：当改变变量的值时，地址发生了改变
+        类型：int str float bool tuple （不可以增删改）
+可变：当改变变量的值时，地址没发生改变
+        类型：list,dict,set （可以增删改）
 '''
 
