@@ -132,10 +132,20 @@ list,tuple,set
 可变参数：**kwargs
 关键字参数
 在函数调用的时候必须传递管家你参数，才可以将其转换成key:value
-将其转换到字典中
+将其装到字典中
 '''
 def show_book(**kwargs):
     print(kwargs)
+    for i,j in kwargs.items():
+        print(i,j)
 
-show_book()
+show_book(bookname = '红楼梦',author = '曹雪芹',price = 88)
+
+
+'''
+可变参数：
+*args  **kwargs
+
+arguments 
+'''
 
