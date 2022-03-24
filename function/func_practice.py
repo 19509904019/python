@@ -79,34 +79,52 @@
 判断是否登录，如果登录则可以借书
 如果没有登录则提示：还未登不能借书
 '''
-#默认未登录
-islogin = False
-#验证是否登录
-def login(username,password):
-    global islogin
-    #用户名和密码
-    is_name = 'admin'
-    is_password = '1234'
-    if username == is_name and password == is_password:
-        print("登录成功！")
-        islogin = True
-    else:
-        print("登录失败！")
-        islogin = False
+# #默认未登录
+# islogin = False
+# #验证是否登录
+# def login(username,password):
+#     global islogin
+#     #用户名和密码
+#     is_name = 'admin'
+#     is_password = '1234'
+#     if username == is_name and password == is_password:
+#         print("登录成功！")
+#         islogin = True
+#     else:
+#         print("登录失败！")
+#         islogin = False
 
-#借书
-def borrow_book(bookname):
-    #已登录
-    if islogin:
-        print("已登录，可以借书！")
-        print(f"{bookname}借出成功！")
-    #未登录
-    else:
-        print("未登录，不能借书！")
-        username = input("请输入用户名：")
-        password = input("请输入密码：")
-        login(username,password)
+# #借书
+# def borrow_book(bookname):
+#     #已登录
+#     if islogin:
+#         print("已登录，可以借书！")
+#         print(f"{bookname}借出成功！")
+#     #未登录
+#     else:
+#         print("未登录，不能借书！")
+#         username = input("请输入用户名：")
+#         password = input("请输入密码：")
+#         login(username,password)
 
 
-borrow_book('红楼梦')
-borrow_book('红楼梦')
+# borrow_book('红楼梦')
+# borrow_book('红楼梦')
+
+'''
+停车计费系统：
+进入停车场记录进入时间，如果出去则记录出去时间，停车时间是：出去-进入时间
+停车场的数据结构是：
+[{'车牌':[进入时间，0]},{'车牌':[进入时间，出去时间]}，...]
+15分钟1块
+1小时4块
+停车场变量 ----> 全局变量
+
+def enter():
+    #键盘输入车牌
+    pass
+
+def go_out():
+    #键盘输入车牌
+    pass
+'''
