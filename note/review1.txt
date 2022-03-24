@@ -19,6 +19,8 @@ join()
 format() 
 lower()  upper()  title()
 
+isinstance(变量，类型) ----> 返回值是bool
+
 4.列表
 定义格式：
 list = []

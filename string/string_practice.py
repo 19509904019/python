@@ -138,7 +138,7 @@ while flag:
     # 判断是否使用用户名登录
     login = input("是否有用户名(y/n，不区分大小写):")
     # 使用用户名登录
-    if login == "y" or login =="Y":
+    if login.lower() == "y":
         #循环输入用户名
         while flag:
             # 输入用户名
