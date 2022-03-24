@@ -2,8 +2,6 @@
 from tkinter import *
 import random
 import time
-import tkinter.messagebox
-
 
 #俄罗斯方块界面的高度
 HEIGHT  = 20
