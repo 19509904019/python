@@ -1,0 +1,1 @@
+score    line    time    scorePtime    linePtime    scorePline    date/n40       4       154.00  0.26          0.03         10.00         2022-03-24 22:28:40/n
