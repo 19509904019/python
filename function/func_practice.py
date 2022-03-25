@@ -124,7 +124,55 @@ def enter():
     #键盘输入车牌
     pass
 
-def go_out():
+def leave():
     #键盘输入车牌
     pass
 '''
+import time
+#记录车辆信息
+car_park = []
+
+# 进入停车场
+def enter():
+    #扫描车牌号
+    plate_numbers = input("请输入车牌号：")
+    print(f"欢迎{plate_numbers}进入南财停车场！")
+    #构建结构{'车牌'：[进入时间，驶出时间]}
+    car = {}
+    #开始计时
+    start = time.time()
+    car[plate_numbers] = [start]
+    #进入停车场
+    car_park.append(car)
+ 
+# 驶离停车场
+def leave():
+    #扫描车牌号
+    plate_numbers = input("请输入车牌号：")
+    #判断汽车是否进场
+    for car in car_park:
+        if plate_numbers in car.keys():
+            #结束时间
+            end = time.time()
+            time_record = car.get(plate_numbers)
+            time_record.append(end)
+            #停车时长
+            differential = time_record[1] - time_record[0]
+            #计算花费
+            total = differential * 4
+            print("车牌为%s停车%.2f小时，应缴费%.2f元" % (plate_numbers,differential,total))
+            break
+    else:
+        print("此车未进场！")
+
+
+#主函数
+def main():
+    #进入停车场
+    enter()
+    #驶出停车场
+    leave()
+
+
+if __name__ == '__main__':
+    main()
