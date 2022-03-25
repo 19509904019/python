@@ -55,3 +55,11 @@ def test(**kwargs):
 
 
 
+函数返回值：return(只有函数才会出现return)
+
+return可以返回一个或者多个值,也可以单独使用return关键字
+return a 
+return a,b ----> (a,b)
+当只出现return时直接结束函数内部后面语句执行
+
+
