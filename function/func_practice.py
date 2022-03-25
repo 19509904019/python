@@ -134,6 +134,11 @@ car_park = []
 
 # 进入停车场
 def enter():
+    '''
+    Descripttion: 进入停车场
+    :param: None
+    :return: 
+    '''
     #扫描车牌号
     plate_numbers = input("请输入车牌号：")
     print(f"欢迎{plate_numbers}进入南财停车场！")
