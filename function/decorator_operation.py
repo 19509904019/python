@@ -4,7 +4,7 @@ version:
 Author: yujun
 Date: 2022-03-25 20:58:49
 LastEditors: yujun
-LastEditTime: 2022-03-25 21:56:27
+LastEditTime: 2022-03-25 22:00:22
 '''
 
 '''
@@ -27,6 +27,8 @@ def 原函数():
 
 将原函数(被装饰的函数)的地址作为参数传递给装饰器函数
 函数体中出现参数时，此时调用的是未被装饰的函数体
+
+主要看return，return后面接的函数就是装饰函数
 '''
 
 
