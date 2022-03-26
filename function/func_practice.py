@@ -67,8 +67,8 @@
 
 
 ''''
-验证是否登录：islogin
-    自定义一个判断用户是否登录功能islogin
+验证是否登录：login
+    自定义一个判断用户是否登录功能login
     参数：username，password
     函数体：
     判断用户输入的用户名和密码是否正确，如果正确则返回True，否则返回False
@@ -128,54 +128,57 @@ def leave():
     #键盘输入车牌
     pass
 '''
+# 记录车辆信息
 import time
-#记录车辆信息
 car_park = []
+
 
 # 进入停车场
 def enter():
     '''
-    Descripttion: 进入停车场
-    :param: None
+    Description: 停车场管理系统
+    :param: 
     :return: 
     '''
-    #扫描车牌号
+    # 扫描车牌号
     plate_numbers = input("请输入车牌号：")
     print(f"欢迎{plate_numbers}进入南财停车场！")
-    #构建结构{'车牌'：[进入时间，驶出时间]}
+    # 构建结构{'车牌'：[进入时间，驶出时间]}
     car = {}
-    #开始计时
+    # 开始计时
     start = time.time()
     car[plate_numbers] = [start]
-    #进入停车场
+    # 进入停车场
     car_park.append(car)
- 
+
+
 # 驶离停车场
 def leave():
-    #扫描车牌号
+    # 扫描车牌号
     plate_numbers = input("请输入车牌号：")
-    #判断汽车是否进场
+    # 判断汽车是否进场
     for car in car_park:
         if plate_numbers in car.keys():
-            #结束时间
+            # 结束时间
             end = time.time()
             time_record = car.get(plate_numbers)
             time_record.append(end)
-            #停车时长
+            # 停车时长
             differential = time_record[1] - time_record[0]
-            #计算花费
+            # 计算花费
             total = differential * 4
-            print("车牌为%s停车%.2f小时，应缴费%.2f元" % (plate_numbers,differential,total))
+            print("车牌为%s停车%.2f小时，应缴费%.2f元" %
+                  (plate_numbers, differential, total))
             break
     else:
         print("此车未进场！")
 
 
-#主函数
+# 主函数
 def main():
-    #进入停车场
+    # 进入停车场
     enter()
-    #驶出停车场
+    # 驶出停车场
     leave()
 
 

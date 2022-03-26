@@ -18,8 +18,6 @@ def 函数名([参数, ....]):
 '''
 # 生成验证码
 import random
-
-from sympy import arg
 def generate_code():
     # 验证码字符
     strings = '0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'
@@ -119,19 +117,21 @@ list,tuple,set
 
 '''
 # #求和
-# def get_sum(*args):
-#     # print(args)
-#     sum = ''
-#     for i in args:
-#         sum += i
-#     print(sum)
+def get_sum(*args):
+    # print(args)
+    sum = ''
+    for i in args:
+        sum += i
+    print(sum)
+    
 
-# get_sum('a','b','c')
+list = ['a','b','c']
+get_sum(*list)
 
 '''
 可变参数：**kwargs
 关键字参数
-在函数调用的时候必须传递管家你参数，才可以将其转换成key:value
+在函数调用的时候必须传递关键字参数，才可以将其转换成key:value
 将其装到字典中
 '''
 def show_book(**kwargs):
@@ -139,7 +139,8 @@ def show_book(**kwargs):
     for i,j in kwargs.items():
         print(i,j)
 
-show_book(bookname = '红楼梦',author = '曹雪芹',price = 88)
+dict = {'bookname' :'红楼梦','author': '曹雪芹','price': 88}
+show_book(**dict)
 
 
 '''
