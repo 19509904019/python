@@ -1,0 +1,133 @@
+总结函数：
+
+普通函数：
+    def 函数名([参数,....])
+        函数体
+    
+    1.如何定义函数
+    2.调用函数
+
+
+    参数：
+    1.无参数：
+    def func():
+        pass
+
+    func()
+
+    2.有参数：
+    一般参数
+
+    def func(a,b):
+        pass
+    
+    func(1,2)
+
+    
+    可变参数：
+    def func(*args,**kwargs):  **kwargs:字典形式 拆包时也用两个* || *args：列表等形式 拆包时用一个*
+        pass
+    
+    func()
+
+    func(1)
+
+    func(a=10)
+
+
+    默认值：
+    def func(a = 10,b = 10):
+        pass
+
+    func()
+    func(100)
+
+    关键字参数：
+    func(b = 99)
+
+    返回值：return 
+
+    没有返回值
+
+    def func():
+        print("----")
+    x = func()  ---->  x = None
+
+    有返回值：
+    def func():
+    return 'a'
+
+    x = func()  ----> 'a'
+
+    def func():
+    return 'a','b'
+
+    x = func()  ----> x = ('a','b')
+
+
+嵌套函数  ---->  闭包  ---->  装饰器
+
+def func():
+    def wrapper():
+    ...
+
+    return wrapper
+
+变量的作用域：LEGB
+L:local 本地  局部变量
+E:encloseing 嵌套
+G:global 全局
+B:built-in 内置的
+
+global nonlocal
+globals()  locals()
+
+
+装饰器：
+单层装饰器
+
+def decorator(func):
+    def wrapper(*args,**kwargs):
+        ....
+
+    return wrapper
+
+
+@decorator
+def house():
+    pass
+
+@decorator
+def f1(a,b):
+    pass
+
+
+多层装饰器：
+@decorator1
+@decorator2
+
+
+def f1(a,b):
+    pass
+
+
+装饰器带参数：
+def outer(a):
+    def decorator(func):
+        def wrapper(*args,**kwargs):
+            ...
+
+        return wrapper
+    return decorator
+
+@decorator(10)
+def house():
+    pass
+
+@decorator(100)
+def house():
+    pass
+
+匿名函数：lambda 参数：返回值
+递归函数：自己调用自己
+
