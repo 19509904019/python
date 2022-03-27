@@ -2,7 +2,7 @@
 Author: yujun
 Date: 2022-03-27 14:10:45
 LastEditors: yujun
-LastEditTime: 2022-03-27 14:59:55
+LastEditTime: 2022-03-27 15:25:43
 FilePath: \python_learning\file\file_operation.py
 Description: 
 '''
@@ -127,16 +127,18 @@ path1 = os.path.join(path,'命名文件名')  返回的是一个拼接后的新�
 '''
 
 import os
-with open(r'C:\Users\12414\Desktop\yan.jpg', 'rb') as stream:
-    container = stream.read()  # 读取文件内容
 
-    path = os.path.dirname(__file__)  # 本地文件路径
-    file_path = stream.name
-    # filename = file_path[file_path.rfind('\\')+1:]  # 文件名称
-    filename_split = os.path.split(file_path)
-    filename = filename_split[1]
-    path1 = os.path.join(path, filename)  # 对地址进行拼接
+#复制文件到当前路径下
+# with open(r'C:\Users\12414\Desktop\yan.jpg', 'rb') as stream:
+#     container = stream.read()  # 读取文件内容
 
-    with open(path1,'wb') as wstream:
-        wstream.write(container)
+#     path = os.path.dirname(__file__)  # 本地文件路径
+#     file_path = stream.name
+#     # filename = file_path[file_path.rfind('\\')+1:]  # 文件名称
+#     filename_split = os.path.split(file_path)
+#     filename = filename_split[1]
+#     path1 = os.path.join(path, filename)  # 对地址进行拼接
+
+#     with open(path1,'wb') as wstream:
+#         wstream.write(container)
 
