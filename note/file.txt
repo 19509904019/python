@@ -1,0 +1,27 @@
+文件操作：
+
+open(path,mode)
+
+mode  ----> r
+s.read()
+s.readline()
+s.readlines()
+s.readable()
+
+不设置mode,默认为 r
+
+mode -----> w,a
+
+with open(path,mode) as wstream:
+    pass
+
+如果path指定的文件不存在，则自动创建
+
+write()
+writeable()
+writelines()
+
+
+
+os模块：
+os.path

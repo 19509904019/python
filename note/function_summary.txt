@@ -129,5 +129,23 @@ def house():
     pass
 
 匿名函数：lambda 参数：返回值
+
+max()
+min()
+sorted()  ------> key = 匿名函数：lambda
+
+map(func,list)
+filter(func,list)   -------->  lambda x : x%2==0
+
+reduce()  ------> from functools import reduce   函数必须有两个参数
+
+
 递归函数：自己调用自己
+自己调用自己
+要有入口
+出口
+
+
+
+
 
