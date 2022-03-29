@@ -1,22 +1,9 @@
 '''
-Author: yujun
-Date: 2022-03-27 14:10:45
-LastEditors: yujun
-LastEditTime: 2022-03-27 15:25:43
-FilePath: \python_learning\file\file_operation.py
-Description: 
-'''
-'''
 Description: 文件操作
 version: 
 Author: yujun
 Date: 2022-03-26 21:28:47
 LastEditors: yujun
-<<<<<<< HEAD
-LastEditTime: 2022-03-29 21:42:03
-=======
-LastEditTime: 2022-03-27 14:08:46
->>>>>>> 695d6e160337e228d151b92e3016ae71914625c0
 '''
 
 '''
@@ -36,11 +23,8 @@ w:输出
 
 缓存：buffering  调节硬件和CPU之间的缓冲
 编码：encoding
-<<<<<<< HEAD
+'''
 
-'''
-=======
-'''
 '''
 读：
     open(path/filename,'rt')  -----> 返回值：stream(管道)
@@ -150,4 +134,3 @@ import os
 #     with open(path1,'wb') as wstream:
 #         wstream.write(container)
 
->>>>>>> 695d6e160337e228d151b92e3016ae71914625c0
