@@ -4,7 +4,7 @@ version:
 Author: yujun
 Date: 2022-03-26 17:09:51
 LastEditors: yujun
-LastEditTime: 2022-03-26 20:50:54
+LastEditTime: 2022-03-27 15:06:13
 '''
 
 '''
@@ -46,7 +46,8 @@ max、min、sorted
 
 
 from functools import reduce
-from isort import file
+
+
 list1 = [('lily', 20), ('ayan', 19), ('yujun', 18), ('Bob', 23)]
 
 # 按照key来排序

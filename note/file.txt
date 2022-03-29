@@ -1,0 +1,48 @@
+文件操作：
+
+open(path,mode)
+
+mode  ----> r
+s.read()
+s.readline()
+s.readlines()
+s.readable()
+
+不设置mode,默认为 r
+
+mode -----> w,a
+
+with open(path,mode) as wstream:
+    pass
+
+如果path指定的文件不存在，则自动创建
+
+write()
+writeable()
+writelines()
+
+
+
+os模块：
+os.path
+
+绝对路径：(全部路径位置)
+absolute  绝对的  C:\Users\12414\Desktop\yan.jpg
+判断是否为绝对路径：
+os.path.isabs('路径')
+
+
+相对路径：(相对路径位置)
+如本文件所在的相对路径：note\file.txt
+
+
+获取路径： directory  目录  文件夹
+当前文件所在文件夹路径
+path = os.path.dirname(__file__)
+
+通过相对路径得到绝对路径
+path = os.path.abspath('文件名')
+
+path = os.path.abspath(__file__)  #当前文件完整路径
+
+path = os.getcwd() #当前文件所在的文件夹 类似os.path.dirname(__file__)
