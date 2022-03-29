@@ -4,7 +4,7 @@ version:
 Author: yujun
 Date: 2022-03-26 21:28:47
 LastEditors: yujun
-LastEditTime: 2022-03-26 21:57:08
+LastEditTime: 2022-03-29 21:42:03
 '''
 
 '''
@@ -24,4 +24,5 @@ w:输出
 
 缓存：buffering  调节硬件和CPU之间的缓冲
 编码：encoding
+
 '''
