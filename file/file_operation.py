@@ -1,6 +1,5 @@
 '''
 Description: 文件操作
-version: 
 Author: yujun
 Date: 2022-03-26 21:28:47
 LastEditors: yujun
