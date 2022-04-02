@@ -40,9 +40,7 @@ os.path.isabs('路径')
 当前文件所在文件夹路径
 path = os.path.dirname(__file__)
 
-通过相对路径得到绝对路径
-path = os.path.abspath('文件名')
-
+绝对路径
 path = os.path.abspath(__file__)  #当前文件完整路径
 
-path = os.getcwd() #当前文件所在的文件夹 类似os.path.dirname(__file__)
+path = os.getcwd() #当前文件所在的根文件夹 类似os.path.dirname(__file__)
