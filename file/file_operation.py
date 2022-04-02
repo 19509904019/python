@@ -119,7 +119,7 @@ path1 = os.path.join(path,'命名文件名')  返回的是一个拼接后的新�
 
 import os
 
-#复制文件到当前路径下
+# 复制文件到当前路径下
 # with open(r'C:\Users\12414\Desktop\yan.jpg', 'rb') as stream:
 #     container = stream.read()  # 读取文件内容
 
@@ -184,7 +184,5 @@ import os
 dir = os.getcwd()
 print(dir)
 
-dir = os.path.dirname(__file__)
-print(dir)
-
-# all = os.listdir(r'c:\p1')
+all = os.listdir(r'c:\p1')  # 返回指定目录下的所有文件和文件夹，保存到列表中
+print(all)
