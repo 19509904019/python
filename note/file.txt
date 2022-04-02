@@ -44,3 +44,7 @@ path = os.path.dirname(__file__)
 path = os.path.abspath(__file__)  #当前文件完整路径
 
 path = os.getcwd() #当前文件所在的根文件夹 类似os.path.dirname(__file__)
+
+os.getcwd()和os.path.dirname()的区别：
+1.当前文件不存在调用时，返回的是相同的文件夹目录
+2.如果A调用B，os.getcwd()返回的是A的路径，即始终是当前文件路径的文件夹，而os.path.dirname()返回B的路径，即源程序所在的文件夹
