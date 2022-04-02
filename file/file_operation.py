@@ -133,3 +133,58 @@ import os
 #     with open(path1,'wb') as wstream:
 #         wstream.write(container)
 
+# with open(r'D:\python_learning\file\yan.jpg','rb') as stream:
+#     container = stream.read()
+#     path = os.path.dirname(__file__)  #文件所在路径
+#     filename = os.path.split(stream.name)[1]  #文件名称
+#     path1 = os.path.join(path,filename)  #路径拼接
+#     # print(path1)
+#     with open(path1,'wb') as wstream:
+#         wstream.write(container)
+
+'''
+os.path
+
+dirname() 获取当前文件所在的文件夹
+join()  拼接
+split()   文件名称
+splitext()  后缀名
+getsize()  文件大小
+
+isabs()
+isfile()  
+isdir()
+
+'''
+# path = r'D:\python_learning\file\yan.jpg'
+
+# result = os.path.split(path)[1]  #分割文件名与路径
+# print(result)    
+
+# result = os.path.splitext(path)[1]  #分割文件与扩展名
+# print(result)
+
+# result = os.path.getsize(path)  #获取文件的大小  单位字节
+# print(result)
+
+
+# result = os.path.join(os.getcwd(),'123.abc')
+# print(result)
+
+
+'''
+os.path 里面的函数
+os中的函数：
+
+
+'''
+
+import os
+
+dir = os.getcwd()
+print(dir)
+
+dir = os.path.dirname(__file__)
+print(dir)
+
+# all = os.listdir(r'c:\p1')
