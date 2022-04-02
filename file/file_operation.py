@@ -181,8 +181,11 @@ os中的函数：
 
 import os
 
-dir = os.getcwd()
-print(dir)
+# dir = os.getcwd()
+# print(dir)
 
-all = os.listdir(r'c:\p1')  # 返回指定目录下的所有文件和文件夹，保存到列表中
-print(all)
+# all = os.listdir(r'C:\Users\Dell\Desktop\p1')  # 返回指定目录下的所有文件和文件夹，保存到列表中
+# print(all)
+
+# 创建文件夹
+# mk_dir = os.mkdir(r'C:\Users\Dell\Desktop\p2')
