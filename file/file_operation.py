@@ -252,32 +252,60 @@ target_path = r'C:\Users\Dell\Desktop\p2'
 # copy(src_path, target_path)
 
 
-'''文件中还有文件夹'''
+'''文件中还有文件夹  采用递归调用'''
+
+# def copy(src, target):
+#     if os.path.isdir(src) and os.path.isdir(target):
+#         # 打开原文件夹
+#         filename = os.listdir(src)
+#         # 读取文件夹内容
+#         for file in filename:
+#             # 拼接文件路径
+#             src_file = os.path.join(src, file)
+#             # 判断是否为新文件夹
+#             if os.path.isdir(src_file):
+#                 # 复制文件夹
+#                 target_file = os.path.join(target, file)
+#                 os.mkdir(target_file)
+#                 copy(src_file, target_file)
+#             else:
+#                 # 读取文件内容
+#                 with open(src_file, 'rb') as rstream:
+#                     container = rstream.read()
+#                     # 复制文件内容
+#                     with open(os.path.join(target, file), 'wb') as wstream:
+#                         wstream.write(container)
+#
+#
+# # 调用函数
+# copy(src_path, target_path)
+# print("复制成功！")
 
 
-def copy(src, target):
-    if os.path.isdir(src) and os.path.isdir(target):
-        # 打开原文件夹
-        filename = os.listdir(src)
-        # 读取文件夹内容
-        for file in filename:
-            # 拼接文件路径
-            src_file = os.path.join(src, file)
-            # 判断是否为新文件夹
-            if os.path.isdir(src_file):
-                # 复制文件夹
-                target_file = os.path.join(target, file)
-                os.mkdir(target_file)
-                copy(src_file, target_file)
-            else:
-                # 读取文件内容
-                with open(src_file, 'rb') as rstream:
-                    container = rstream.read()
-                    # 复制文件内容
-                    with open(os.path.join(target, file), 'wb') as wstream:
-                        wstream.write(container)
+''' 删除文件夹'''
 
 
-# 调用函数
-copy(src_path, target_path)
-print("复制成功！")
+# 封装成函数
+# def delete(target):
+#     """
+#     :param target: 目标文件夹路径
+#     :return: 0
+#     """
+#     # 打开要删除的文件夹
+#     filename = os.listdir(target)
+#     for file in filename:
+#         # 文件路径
+#         target_file = os.path.join(target, file)
+#         # 判断是否为文件夹
+#         if os.path.isdir(target_file):
+#             delete(target_file)
+#         else:
+#             # 删除文件
+#             os.remove(target_file)
+#     # 删除整个文件夹
+#     os.rmdir(target)
+
+
+# # 调用函数
+# delete(target_path)
+# print("删除成功!")
