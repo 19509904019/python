@@ -1,9 +1,9 @@
-'''
+"""
 Description: 文件操作
 Author: yujun
 Date: 2022-03-26 21:28:47
 LastEditors: yujun
-'''
+"""
 
 '''
 文件上传：
@@ -175,11 +175,16 @@ isdir()
 '''
 os.path 里面的函数
 os中的函数：
-
+os.getcwd()  # 获取当前目录
+os.listdir()  # 浏览文件夹
+os.mkdir()  # 创建文件夹
+os.rmdir()  # 删除一个空文件夹
+os.removedirs() # 删除到不为空的文件夹，当最后一个文件夹不为空时则报错
+os.remove()  # 删除文件
+os.chdir()  # 切换目录
 
 '''
 
-import os
 
 # dir = os.getcwd()
 # print(dir)
@@ -188,4 +193,92 @@ import os
 # print(all)
 
 # 创建文件夹
-# mk_dir = os.mkdir(r'C:\Users\Dell\Desktop\p2')
+# os.mkdir(r'C:\Users\Dell\Desktop\p2')
+# if not os.path.exists(r'C:\Users\Dell\Desktop\p2'):
+#     os.mkdir(r'C:\Users\Dell\Desktop\p2')
+
+# 删除文件夹
+# os.rmdir(r'C:\Users\Dell\Desktop\p2')   # 只删除空的文件夹
+
+# os.removedirs(r'C:\Users\Dell\Desktop\p1\p2')  # 最后一个子目录
+
+# 删除文件
+# os.remove(r'C:\Users\Dell\Desktop\p1\p2')  # 只能删除文件
+
+# path = r'C:\Users\Dell\Desktop\p1\p2'
+# filelist = os.listdir(path)  # ['123.txt']
+# print(filelist)
+# for file in filelist:
+#     # 删除文件
+#     path1 = os.path.join(path, file)
+#     os.remove(path1)
+# else:
+#     # 删除文件所在的文件夹
+#     os.rmdir(path)
+#     os.rmdir(path[:path.rfind('\\')])
+
+# 切换目录  相当于cd : change direction
+# os.chdir(r'C:\Users\Dell\Desktop\深度学习')
+# path = os.getcwd()
+# print(path)
+
+
+'''
+文件复制
+
+'''
+src_path = r'C:\Users\Dell\Desktop\p1'
+target_path = r'C:\Users\Dell\Desktop\p2'
+
+# 封装成函数
+'''没有文件夹的情况下'''
+# def copy(src, target):
+#     if os.path.isdir(src) and os.path.isdir(target):
+#         # 文件夹里面的所有文件名
+#         filename = os.listdir(src)
+#         # 遍历所有文件
+#         for file in filename:
+#             path1 = os.path.join(src, file)  # 文件的绝对路径
+#             # 读文件
+#             with open(path1, 'rb') as rstream:
+#                 container = rstream.read()
+#                 # 写文件
+#                 path2 = os.path.join(target, file)
+#                 with open(path2, 'wb') as wstream:
+#                     wstream.write(container)
+#         print("复制成功!")
+#
+#
+# # 调用函数
+# copy(src_path, target_path)
+
+
+'''文件中还有文件夹'''
+
+
+def copy(src, target):
+    if os.path.isdir(src) and os.path.isdir(target):
+        # 打开原文件夹
+        filename = os.listdir(src)
+        # 读取文件夹内容
+        for file in filename:
+            # 拼接文件路径
+            src_file = os.path.join(src, file)
+            # 判断是否为新文件夹
+            if os.path.isdir(src_file):
+                # 复制文件夹
+                target_file = os.path.join(target, file)
+                os.mkdir(target_file)
+                copy(src_file, target_file)
+            else:
+                # 读取文件内容
+                with open(src_file, 'rb') as rstream:
+                    container = rstream.read()
+                    # 复制文件内容
+                    with open(os.path.join(target, file), 'wb') as wstream:
+                        wstream.write(container)
+
+
+# 调用函数
+copy(src_path, target_path)
+print("复制成功！")
