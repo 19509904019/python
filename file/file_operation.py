@@ -5,6 +5,7 @@ Date: 2022-03-26 21:28:47
 LastEditors: yujun
 """
 import os
+
 '''
 文件上传：
 保存log
@@ -282,7 +283,6 @@ target_path = r'C:\Users\Dell\Desktop\p2'
 
 ''' 删除文件夹'''
 
-
 # 封装成函数
 # def delete(target):
 #     """
@@ -307,4 +307,3 @@ target_path = r'C:\Users\Dell\Desktop\p2'
 # # 调用函数
 # delete(target_path)
 # print("删除成功!")
-
