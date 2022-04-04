@@ -2,7 +2,7 @@
 Author: yujun
 Date: 2022-04-03 22:20:20
 LastEditors: yujun
-LastEditTime: 2022-04-03 23:18:25
+LastEditTime: 2022-04-04 10:33:20
 FilePath: \python_learning\exception\exception_operation.py
 Description: 
 '''
@@ -48,13 +48,14 @@ def fun():
             result = n1 / n2
         else:
             print("输入错误，请重新输入！")
-        
-        print("结果是：",sum)
+
+        print("结果是：", result)
     except ZeroDivisionError:
         print("除数不能为0！")
-    
+
     except ValueError:
         print("必须输入数字！")
+
 
 fun()
 print("-----------------------------")
