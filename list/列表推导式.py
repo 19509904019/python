@@ -5,11 +5,11 @@
 #     list.append(i)
 # print(list)
 
-#格式1
+# 格式1
 # list = [i for i in range(1,21)]
 # print(list)
 
-#将 1-100之间所有的偶数存放到列表当中
+# 将 1-100之间所有的偶数存放到列表当中
 # list = [i for i in range(2,101,2)]
 # print(list)
 
@@ -17,7 +17,7 @@
 # list = [i for i in range(1,101) if i%2==0]
 # print(list)
 
-#取出英文字符
+# 取出英文字符
 # list = ['1','hello','2','world','3','5']
 # list1 = [i for i in list if i.isalpha()]
 # print(list1)
@@ -40,12 +40,19 @@
 
 # c = [[i,i+1,i+2] if i < 98 else [j for j in range(i,101)] for i in range(1,101,3)]
 
-#找出里面名字含有两个 'e' 的放到新列表中：
+# 找出里面名字含有两个 'e' 的放到新列表中：
 # names = [['Tom','Billy','Jefferson','Andrew','Wesley','Steven','Joe']
 #          ['Alice','Jill','Ana','Wendy','Jennifer','Sherry','Eva']]
 
-names = [['Tom','Billy','Jefferson','Andrew','Wesley','Steven','Joe'],
-         ['Alice','Jill','Ana','Wendy','Jennifer','Sherry','Eva']]
+# names = [['Tom', 'Billy', 'Jefferson', 'Andrew', 'Wesley', 'Steven', 'Joe'],
+#          ['Alice', 'Jill', 'Ana', 'Wendy', 'Jennifer', 'Sherry', 'Eva']]
+#
+# new_names = [j for i in names for j in i if j.count('e') == 2]
+# print(new_names)
+#
 
-new_names = [j for i in names for j in i if j.count('e')==2]
-print(new_names)
+# 0~5偶数  0~10奇数
+# [(偶数，奇数)，（）...]   [(0,3),(0,5),(0,7)....]
+
+# newlist = [(i, j) for i in range(5) if i % 2 == 0 for j in range(10) if j % 2 != 0]
+# print(newlist)

@@ -47,7 +47,6 @@ max、min、sorted
 
 from functools import reduce
 
-
 list1 = [('lily', 20), ('ayan', 19), ('yujun', 18), ('Bob', 23)]
 
 # 按照key来排序
@@ -66,14 +65,14 @@ result = filter(lambda x: x[1] >= 20, list1)
 print(result)
 print(list(result))
 
-#map 通过匿名函数指明提取的内容，并对内容进行加工
-result = map(lambda x:x[0].upper(),list1)
+# map 通过匿名函数指明提取的内容，并对内容进行加工
+result = map(lambda x: x[0].upper(), list1)
 print(result)
 print(list(result))
 
-#reduce
-result = reduce(lambda x,y:x+y,[1,2,3,4,5])
+# reduce
+result = reduce(lambda x, y: x + y, [1, 2, 3, 4, 5])
 print(result)
 
-#zip
+# zip
 reuslt = zip()

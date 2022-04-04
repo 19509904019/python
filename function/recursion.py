@@ -14,6 +14,7 @@ LastEditTime: 2022-03-26 17:29:49
 2.每次递归向出口靠近
 '''
 
+
 # #打印1-10
 # def print_number(count):
 #     count += 1
@@ -68,16 +69,17 @@ LastEditTime: 2022-03-26 17:29:49
 #         return 1
 #     elif n > 2:
 #         return fibonacci(n-1)+fibonacci(n-2)
-    
+
 # list = [fibonacci(i) for i in range(1,11)]
 # print(list)
 
-#不用递归用循环
+# 不用递归用循环
 def fib_loop_for(n):
-    a,b = 0,1
+    a, b = 0, 1
     for i in range(n):
-        a,b = b,a+b
+        a, b = b, a + b
     return a
 
-for i in range(1,11):
-    print(fib_loop_for(i),end=" ")
+
+for i in range(1, 11):
+    print(fib_loop_for(i), end=" ")
