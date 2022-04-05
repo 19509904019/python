@@ -71,6 +71,12 @@ class Student:
 
 # 使用类
 yanyan = Student()
-yanyan.age = 3  # 对象属性
+# yanyan.age = 3  # 对象属性
 # 先找自己空间的，然后再去模型中去找，如果自己空间中存在age属性，则不会去模型中去找
 print(yanyan.age)
+# 更改类属性
+Student.age = 20
+print(yanyan.age)
+# 新的对象也是改过后的类属性
+yujun = Student()
+print(yujun.age)
