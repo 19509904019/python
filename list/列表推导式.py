@@ -1,3 +1,11 @@
+'''
+Author: yujun
+Date: 2022-04-05 09:03:00
+LastEditors: yujun
+LastEditTime: 2022-04-05 09:24:24
+FilePath: \python_learning\list\列表推导式.py
+Description: 
+'''
 # 列表推导式：最终得到的是一个列表
 
 # list = []
@@ -46,13 +54,15 @@
 
 # names = [['Tom', 'Billy', 'Jefferson', 'Andrew', 'Wesley', 'Steven', 'Joe'],
 #          ['Alice', 'Jill', 'Ana', 'Wendy', 'Jennifer', 'Sherry', 'Eva']]
-#
-# new_names = [j for i in names for j in i if j.count('e') == 2]
+# new_names = [newname for name in names for newname in name if newname.count('e') == 2]
 # print(new_names)
-#
-
 # 0~5偶数  0~10奇数
-# [(偶数，奇数)，（）...]   [(0,3),(0,5),(0,7)....]
+# [(偶数，奇数)，()...]   [(0,3),(0,5),(0,7)....]
 
 # newlist = [(i, j) for i in range(5) if i % 2 == 0 for j in range(10) if j % 2 != 0]
 # print(newlist)
+
+# list1 = [[1,2,3],[4,5,6],[7,8,9],[1,3,5]]   ----> [3,6,9,5
+list1 = [[1,2,3],[4,5,6],[7,8,9],[1,3,5]]
+new_list  =[i[-1] for i in list1]
+print(new_list)
