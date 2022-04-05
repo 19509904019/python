@@ -81,5 +81,7 @@ def fib_loop_for(n):
     return a
 
 
-for i in range(1, 11):
+for i in range(1, 10):
     print(fib_loop_for(i), end=" ")
+
+
