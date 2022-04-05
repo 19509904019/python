@@ -7,7 +7,8 @@ FilePath: \python_learning\dict\字典推导式.py
 Description: 字典推导式
 '''
 
-dict1 = {'name':'yujun','age':18,'career':'student'}
+dict1 = {'name': 'yujun', 'age': 18, 'career': 'student'}
 # newdict = {value for value in dict1.values()}
 # print(newdict)
-newdict = 
+newdict = {value: key for key, value in dict1.items()}
+print(newdict)
