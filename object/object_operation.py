@@ -109,3 +109,21 @@ def 方法名(self,[参数,参数]):
 # phone2 = Phone()
 # print(phone2,"-----2-----")
 # phone2.call()    #对象没有类中方法的属性就会报错
+
+
+"""
+函数 和 类里面定义的函数：方法
+"""
+# def func(names):
+#     for name in names:
+#         print(name)
+#
+# username = ['yujun','ayan','yanyan']
+# func(username)
+
+class Phone:
+    def call(self):   #self是不断发生改变的
+        pass
+
+p = Phone()
+p.call()   # p.call()  p对象
