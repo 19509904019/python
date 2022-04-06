@@ -60,23 +60,52 @@
 """
 定义类和属性
 """
-
-
-# 定义类
-class Student:
-    # 类属性
-    name = 'ayan'
-    age = 18
-
+# # 定义类
+# class Student:
+#     # 类属性
+#     name = 'ayan'
+#     age = 18
 
 # 使用类
-yanyan = Student()
-# yanyan.age = 3  # 对象属性
-# 先找自己空间的，然后再去模型中去找，如果自己空间中存在age属性，则不会去模型中去找
-print(yanyan.age)
-# 更改类属性
-Student.age = 20
-print(yanyan.age)
-# 新的对象也是改过后的类属性
-yujun = Student()
-print(yujun.age)
+# yanyan = Student()
+# # yanyan.age = 3  # 对象属性
+# # 先找自己空间的，然后再去模型中去找，如果自己空间中存在age属性，则不会去模型中去找
+# print(yanyan.age)
+# # 更改类属性
+# Student.age = 20
+# print(yanyan.age)
+# # 新的对象也是改过后的类属性
+# yujun = Student()
+# print(yujun.age)
+
+"""
+类中的方法：动作
+种类：普通方法  类方法  静态方法  魔术方法
+"""
+
+"""
+普通方法格式：
+def 方法名(self,[参数,参数]):
+    pass
+"""
+# class Phone:
+#     brand = 'HUAWEI'
+#     price = 5999
+#     type = 'P40'
+#
+#     # Phone类里面的方法:call
+#     def call(self):
+#         print("self----->",self)   #self就是调用类创建的对象本身
+#         print("正在打电话...")
+#         print("留言：",self.note)
+#
+#
+# phone1 = Phone()
+# print(phone1,"-----1-----")   #将对象自身作为类中方法的参数
+# phone1.note = 'phone1的note'
+# phone1.call()
+#
+# print("*"*30)
+# phone2 = Phone()
+# print(phone2,"-----2-----")
+# phone2.call()    #对象没有类中方法的属性就会报错
