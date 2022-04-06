@@ -125,5 +125,6 @@ class Phone:
     def call(self):   #self是不断发生改变的
         pass
 
+
 p = Phone()
 p.call()   # p.call()  p对象
