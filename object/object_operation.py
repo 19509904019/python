@@ -296,14 +296,18 @@ del p1  删除p1对地址的引用
 
 4.当一块空间没有了任何引用，默认执行__del__()
 程序执行完毕后，python解释器回收所有在本次执行过程中使用到的空间，所以最后执行__del__()
+
+__str__
+触发时机：打印对象名  自动触发去调用__str__里面的内容
+注意：一定在__str__()方法中添加return，return后面的内容就是打印对象看到的内容
 '''
-import sys
+# import sys
 
 
-class Person:
-    def __init__(self, name):
+# class Person:
+    # def __init__(self, name):
         # print("-----init------", self)  # <__main__.Person object at 0x0000025BB8D954F0>
-        self.name = name
+        # self.name = name
 
     # def __new__(cls, *args, **kwargs):  # __new__向内存要空间  ---> 地址
     #     print("----new------")
@@ -311,15 +315,18 @@ class Person:
     #     position = object.__new__(cls)  # <__main__.Person object at 0x0000025BB8D954F0>
     #     print(position)
     #     return position
-    #
-    # # def __call__(self, *args, **kwargs):
-    # #     print("------->call")
-    #
+
+    # def __call__(self, *args, **kwargs):
+    #     print("------->call")
+
     # def __call__(self, name):
     #     print("------->call", name)
-
-    def __del__(self):
-        print("程序结束啦！！！")
+    #
+    # def __del__(self):
+    #     print("程序结束啦！！！")
+    #
+    # def __str__(self):
+    #     return '姓名是：' + self.name + '，年龄是：18'
 
 
 # __new__
@@ -333,20 +340,71 @@ class Person:
 
 
 # __del__
-p = Person('yanyan')
-p1 = p
-p2 = p
-print(sys.getrefcount(p))
+# p = Person('yanyan')
+# p1 = p
+# p2 = p
+# print(sys.getrefcount(p))
+#
+#
+# del p1
+# print(sys.getrefcount(p))
+#
+# del p2
+# print(sys.getrefcount(p))
+# print(p.name)
+
+#__str__
+# p = Person('yanyan')
+# print(p)
 
 
-del p1
-print(sys.getrefcount(p))
+'''
+总结：魔术方法
 
-del p2
-print(sys.getrefcount(p))
-print(p.name)
+重点：
+__init__  (构造方法，创建完空间之后调用的第一个方法)
+__str__
 
+了解：
+__new__  作用：开辟空间
 
+__del__  作用：没有指针引用的时候会调用，99%都不需要重写
 
+__call__ 作用：想不想当成函数用
 
-
+大总结：
+方法：
+    普通方法  ---->  重点
+    def 方法名(self,[参数]):
+        方法体
+    
+    对象.方法()
+    
+    方法之间的调用：
+    class A:
+        def a(self):
+            pass
+        def b(self):
+            #调用a方法
+            self.a()
+            
+    类方法:
+    @classmethod
+    def 方法名(cls,[参数]):
+        pass
+        
+    类名.方法名()
+    对象.方法名()
+          
+    静态方法:
+    @staticmethod
+    def 方法名([参数]):
+        pass
+        
+    类名.方法名()
+    对象.方法名()
+    
+    魔术方法:自动执行方法
+    print(p)  ---->  __str__
+    
+'''
