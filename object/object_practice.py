@@ -60,22 +60,11 @@ class Person:
     # 初始化
     def __init__(self, id, name):
         self.id = id
-        self.__name = name
+        self.name = name
+        self.salary = 0
 
-    # 设置姓名
-    def set_name(self, name):
-        self.__name = name
-
-    # 获取姓名
-    def get_name(self):
-        return self.__name
-
-    # 获取员工号
-    def get_id(self):
-        return self.id
-
-    def show_salary(self):
-        pass
+    def __str__(self):
+        return '工号：' + self.id + '\t姓名：' + self.name + '\t月薪：' + str(self.salary)
 
 
 # 工人类
@@ -89,7 +78,8 @@ class Worker(Person):
 
     # 计算工资
     def calculate_salary(self):
-        return self.hours * self.hour_salary
+        self.salary = self.hours * self.hour_salary
+        return self.salary
 
 
 # 销售员类
@@ -102,7 +92,8 @@ class Saleman(Person):
 
     # 计算工资
     def calculate_salary(self):
-        return self.saleroom * self.commission_rate
+        self.salary = self.saleroom * self.commission_rate
+        return self.salary
 
 
 # 经理类
@@ -114,12 +105,13 @@ class Manager(Person):
 
     # 计算工资
     def calculate_salary(self):
-        return self.money
+        self.salary = self.money
+        return self.salary
 
 
 # 销售经理类
-class SaleManager:
-    def __init__(self, id, name, saleroom,commission_rate,money):
+class SaleManager(Person):
+    def __init__(self, id, name, saleroom, commission_rate, money):
         # 继承父类
         super(SaleManager, self).__init__(id, name)
         self.saleroom = saleroom
@@ -128,10 +120,13 @@ class SaleManager:
 
     # 计算工资
     def calculate_salary(self):
-        return self.money + self.saleroom * self.commission_rate
+        self.salary = self.money + self.saleroom * self.commission_rate
 
 
-worker = Worker('1120211227','worker',200,30)
+worker = Worker('1120211227', 'worker', 200, 50)
 
-m = worker.calculate_salary()
-print(m)
+salemanger = SaleManager('1220211014', 'salemanager', 5000000, 0.003, 5000)
+worker.calculate_salary()
+salemanger.calculate_salary()
+print(worker)
+print(salemanger)
