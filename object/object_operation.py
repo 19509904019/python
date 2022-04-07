@@ -305,28 +305,28 @@ __str__
 
 
 # class Person:
-    # def __init__(self, name):
-        # print("-----init------", self)  # <__main__.Person object at 0x0000025BB8D954F0>
-        # self.name = name
+# def __init__(self, name):
+# print("-----init------", self)  # <__main__.Person object at 0x0000025BB8D954F0>
+# self.name = name
 
-    # def __new__(cls, *args, **kwargs):  # __new__向内存要空间  ---> 地址
-    #     print("----new------")
-    #     # return super().__new__(cls)  # super()调用父类方法一般不用传参
-    #     position = object.__new__(cls)  # <__main__.Person object at 0x0000025BB8D954F0>
-    #     print(position)
-    #     return position
+# def __new__(cls, *args, **kwargs):  # __new__向内存要空间  ---> 地址
+#     print("----new------")
+#     # return super().__new__(cls)  # super()调用父类方法一般不用传参
+#     position = object.__new__(cls)  # <__main__.Person object at 0x0000025BB8D954F0>
+#     print(position)
+#     return position
 
-    # def __call__(self, *args, **kwargs):
-    #     print("------->call")
+# def __call__(self, *args, **kwargs):
+#     print("------->call")
 
-    # def __call__(self, name):
-    #     print("------->call", name)
-    #
-    # def __del__(self):
-    #     print("程序结束啦！！！")
-    #
-    # def __str__(self):
-    #     return '姓名是：' + self.name + '，年龄是：18'
+# def __call__(self, name):
+#     print("------->call", name)
+#
+# def __del__(self):
+#     print("程序结束啦！！！")
+#
+# def __str__(self):
+#     return '姓名是：' + self.name + '，年龄是：18'
 
 
 # __new__
@@ -353,7 +353,7 @@ __str__
 # print(sys.getrefcount(p))
 # print(p.name)
 
-#__str__
+# __str__
 # p = Person('yanyan')
 # print(p)
 
