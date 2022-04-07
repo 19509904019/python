@@ -111,7 +111,7 @@ class Person:
 
     def feed_pet(self, pet):  # pet既可以接收cat,也可以接收dog,还可以接收tiger  多态
         if isinstance(pet, Pet):
-            print("{}喜欢养宠物：{},昵称是：{}".format(self.name, cat.role, cat.nickname))
+            print("{}喜欢养宠物：{},昵称是：{}".format(self.name, pet.role, pet.nickname))
         else:
             print("不是宠物类型的...")
 
@@ -156,3 +156,4 @@ person = Person("家伟")
 
 person.feed_pet(cat)
 person.feed_pet(tiger)
+person.feed_pet(dog)
