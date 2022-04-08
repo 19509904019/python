@@ -216,6 +216,7 @@ class Student(Person):
     def eat(self):
         print("{}喜欢吃嘎嘎".format(self.name))
 
+
 class Employee(Person):
     def __init__(self, name, age, salary, manager):
         super(Employee, self).__init__(name, age)

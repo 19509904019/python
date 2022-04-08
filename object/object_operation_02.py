@@ -39,7 +39,7 @@ __属性：就是将属性私有化，访问范围仅仅限于类中
 #     # get是为了取值
 #     def getAge(self):
 #         return self.__age
-#         # return self.__score
+#
 #
 #     def __str__(self):
 #         return '姓名：{}，年龄：{}，考试分数：{}'.format(self.name, self.__age, self.__score)
