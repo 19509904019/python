@@ -34,9 +34,10 @@ list1 = [1, 2, 4, 5, 7, 7]
 sum = calculate.add(*list1)
 print(sum)
 
+# 普通方法必须创建对象才能调用
 cal = calculate.Calculate(0)
 cal.test1()
-# cal.test2()
+
 # 类方法无需创建对象即可调用
 calculate.Calculate.test2()
 

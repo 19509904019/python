@@ -35,7 +35,7 @@ has a:
 
     s = Student()
 
-多继承：
+多继承：广度优先遍历
 class C(A,B):
     pass
 

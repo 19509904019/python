@@ -18,5 +18,6 @@
 import sys
 
 print(sys.path)
-print(sys.version)
+print(sys.copyright)
 print(sys.argv)  # 运行程序时的参数，argv是一个列表
+sys.getdefaultencoding()
