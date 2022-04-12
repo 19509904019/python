@@ -77,8 +77,21 @@ print(result)
 9.{m} 用于验证将前面的模式匹配m次
 10.{m,n} 用于将前面的模式匹配m次到n次（贪婪模式），即最小匹配m次，最大匹配n次  m<x<n
 11.{m,n}? 即上面{m,n} 的非贪婪版本
+
+
+\A:表示从字符串的开始处匹配
+\Z:表示从字符串的结束处匹配，如果存在换行，只匹配换行前的结束字符串
+\b:匹配一个单词边界，也就是指单词和空格间的位置
+\B:匹配非单词边界
+\d:匹配任意数字
+\D:匹配任意非数字字符
+\s:匹配任意空白字符
+\S:匹配任意非空白字符
+\w:匹配任意字符数字及下划线
+\W:匹配任意非字母数字及下划线
+\\:匹配原义的反斜杠\
 '''
-msg = "agvaggfgva45645468fdsfdfgdl2gdg43sfag"
+msg = "agvaggfgva45645468fdsfdfgdl2gdgg43sfag"
 
 result = re.findall('[a-z][0-9]+[a-z]', msg)
 print(result)
@@ -89,7 +102,43 @@ print(result)
 result = re.findall('[a-z][0-9]?[a-z]', msg)
 print(result)
 
-#QQ号验证
+# QQ号验证
 QQ = '1241412075'
-result = re.match('^[1-9][0-9]{4,10}$',QQ)
+result = re.match('^[1-9][0-9]{4,10}$', QQ)
 print(result)
+
+# 用户名可以是字母或者数字，不能是数字开头，用户名长度必须6位以上[0-9 a-z A-Z]
+username = 'admin1444'
+# result = re.match('^[a-zA-Z][0-9a-zA-Z]{5,}$', username)
+result = re.match('^\D\w{5,}$', username)
+print(result)
+
+# \b
+msg = 'a.py b.py c.txt d.png e.py f/py'
+result = re.findall(r'\w*\.py\b',msg)
+print(result)
+
+"""
+总结：
+ . :除\n外的任意字符
+ ^ 开头
+ $ 结尾
+ [] 范围  [abc]  [a-z]  [a-z$%&]
+ 
+正则预定义：
+\s 匹配空格
+\S 匹配非空格
+\b 边界
+\d 数字
+\w  word [0-9a-zA-Z]
+
+量词:
+*  >=0
++  >=1
+?  0 or 1
+
+{m}:固定m位
+{m,}:  >=m
+{m,n}: m<= x <=n
+
+"""

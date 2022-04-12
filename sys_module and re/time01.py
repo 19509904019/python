@@ -21,14 +21,14 @@ print(s)
 print('-' * 50)
 
 # 将时间戳转成元组
-t = time.localtime(t)
-print(t)
-print(t.tm_hour)
-print(t.tm_yday)
+t3 = time.localtime(t)
+print(t3)
+print(t3.tm_hour)
+print(t3.tm_yday)
 print('-' * 50)
 
 # 将元组转成时间戳
-tt = time.mktime(t)
+tt = time.mktime(t3)
 print(tt)
 print('-' * 50)
 
@@ -38,7 +38,7 @@ print(s)
 print('-' * 50)
 
 # 将字符串转成元组的方式
-r = time.strptime('2022-04-11', '%Y/%m/%d')
+r = time.strptime('2022-04-12', '%Y/%m/%d \n')
 print(r)
 
 '''

@@ -30,9 +30,8 @@ def func():
         ran1 = str(random.randint(0, 9))
         ran2 = chr(random.randint(65, 90))
         ran3 = chr(random.randint(97, 122))
-
+        # 随机取一个字符串
         r = random.choice([ran1, ran2, ran3])
-
         code += r
     return code
 
