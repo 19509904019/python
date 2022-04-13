@@ -1,6 +1,7 @@
-# 自定义进程
+# 自定义进程  就是重写run()方法
 from multiprocessing import Process
 from time import sleep
+
 
 class MyProcess(Process):
     def __init__(self, name):

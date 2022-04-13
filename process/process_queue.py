@@ -34,7 +34,7 @@ def download(q):
     for image in images:
         print("正在下载：", image)
         sleep(0.5)
-        q.put(image)
+        q.put(image, timeout=1)
 
 
 def getfile(q):

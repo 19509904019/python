@@ -15,7 +15,7 @@ pool.apply()  阻塞式
 pool.apply_async() 非阻塞式
 
 pool.close()
-pool.join()   让主进程让步
+pool.join()   给主进程让步
 """
 # #非阻塞式
 # import os
