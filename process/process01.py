@@ -26,29 +26,60 @@
 进程
 优点：稳定性高，一个进程崩溃了不会影响其他进程
 缺点：①创建进程开销巨大  ②操作系统能同时运行的进程数目是有限的
+
+from multiprocessing import Process
+
+Process(target = 函数，name = 进程的名字，args = (给函数传递的参数))
+
+对象调用方法：
+Process.start()  启动进程并执行任务
+Process.run()   知识执行了任务但是没有启动进程
+terminate()  终止
 """
 # 进程创建
+import os
 from multiprocessing import Process
 from time import sleep
 
+count = 0
+
 
 def task1():
+    global count
     while True:
         sleep(1)
-        print("这是任务1....")
+        count += 1
+        print("这是任务1....", os.getpid(), "-----", os.getppid(),count)
 
 
 def task2():
+    global count
     while True:
-        sleep(1)
-        print("这是任务2....")
+        sleep(2)
+        count += 1
+        print("这是任务2....", os.getpid(), "-----", os.getppid(),count)
 
 
+'''
+先执行主进程再执行子进程
+'''
 if __name__ == '__main__':
-    #子进程
-    p1 = Process(target=task1,name="任务1")
+    print(os.getpid())
+    # 子进程
+    p1 = Process(target=task1, name="任务1")
     p1.start()
     print(p1.name)
-    p2 = Process(target=task2,name="任务2")
-    p2.run()
+    p2 = Process(target=task2, name="任务2")
+    p2.start()
     print(p2.name)
+    number = 0
+    while True:
+        number += 1
+        sleep(0.2)
+        if number == 100:
+            p1.terminate()
+            p2.terminate()
+            break
+        else:
+            print(number)
+    print("-" * 50)
