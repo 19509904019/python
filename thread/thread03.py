@@ -13,7 +13,7 @@ import random
 import time
 
 
-def produce(q):
+def produce(q):  # 队列传递数据
     i = 0
     while i < 10:
         num = random.randint(1, 100)
@@ -38,8 +38,7 @@ def consume(q):
 
 
 if __name__ == '__main__':
-    q = queue.Queue(10)
-    arr = []
+    q = queue.Queue(10)  # 队列最大容纳数
 
     # 创建生产者
     tp = threading.Thread(target=produce, args=(q,))

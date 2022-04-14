@@ -100,9 +100,8 @@ if __name__ == '__main__':
     t2 = threading.Thread(target=run2, name='2')
 
     t1.start()
-    t1.join()
-
     t2.start()
+    t1.join()
     t2.join()
 
     print("现在的值为：", ticket)

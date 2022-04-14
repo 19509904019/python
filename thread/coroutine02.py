@@ -1,4 +1,5 @@
 # greenlet 完成协程任务
+
 import time
 
 from greenlet import greenlet
@@ -29,5 +30,5 @@ if __name__ == '__main__':
     ga = greenlet(task_a)
     gb = greenlet(task_b)
     gc = greenlet(task_c)
-    print(ga)
-    ga.switch()
+    # print(ga)
+    ga.switch()  # 使用switch()调用

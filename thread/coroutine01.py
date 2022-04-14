@@ -31,7 +31,9 @@ if __name__ == '__main__':
 
     while True:
         try:
-            next(g1)
-            next(g2)
+            # next(g1)
+            # next(g2)
+            g1.__next__()
+            g2.__next__()
         except:
             break

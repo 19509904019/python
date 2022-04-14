@@ -12,7 +12,7 @@ import time
 import gevent
 from gevent import monkey
 
-monkey.patch_all()  # 将所有耗时操作进行替换
+monkey.patch_all()  # 猴子补丁，将所有耗时操作进行替换
 
 
 def task_a():
