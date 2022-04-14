@@ -1,0 +1,49 @@
+进程，线程：
+Process类
+创建进程：
+def func(n):
+    pass
+
+p = Process(target=func,name='',args = ())
+p.start()
+run()
+
+
+class MyProcess(Process):
+    def run(self):
+        pass
+
+p = MyProcess()
+p.start()
+
+进程数据共享：
+n=0
+
+进程池：Pool
+p = Pool(5)
+
+阻塞式：apply(func,args,kwargs)
+非阻塞式：apply_async(func,args,kwargs,callback=函数)
+
+进程间通信：
+Queue()
+q = Queue(4)
+
+q.put()
+q.get()
+q.qsize()
+q.full()
+
+线程：
+包含关系
+
+进程里面可以存折多个线程，多个线程共用进程资源
+
+t = Thread(target=func,name='',args=(),kwargs='')
+t.start()
+
+GIL:全局解释器锁
+
+线程：'伪线程'，耗时操作
+
+进程：计算量大
