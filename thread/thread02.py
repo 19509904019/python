@@ -20,26 +20,26 @@ import threading
 import random
 import time
 
-lock = threading.Lock()
+lock1 = threading.Lock()
 
 list1 = [0] * 10
 
 
 def task1():
-    # 获取线程锁，如果已经上锁，则等待锁的释放
-    lock.acquire()  # 阻塞
+    # 获取线程锁，如果已经上锁，则等待锁的释放(使用同一个锁)
+    lock1.acquire()  # 阻塞
     for i in range(len(list1)):
         list1[i] = 1
         time.sleep(0.5)
-    lock.release()
+    lock1.release()
 
 
 def task2():
-    lock.acquire()
+    lock1.acquire()
     for i in list1:
         print(i)
         time.sleep(0.5)
-    lock.release()
+    lock1.release()
 
 
 if __name__ == '__main__':
@@ -52,6 +52,6 @@ if __name__ == '__main__':
     t2.join()  # 插队，t1 t2 完成后再执行下面语句
     print(list1)
 '''
-给线程加锁时，只有当一个线程完成后释放锁另一个线程才继续进行，如果不加锁则两个线程会同时并发进行，这样就会对
+给线程加同一个锁时，只有当一个线程完成后释放锁另一个线程才继续进行，如果不加锁则两个线程会同时并发进行，这样就会对
 数据造成错误，但是不考虑线程对数据的影响时，可以用并发线程
 '''
