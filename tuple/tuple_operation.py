@@ -14,6 +14,7 @@ tuple1 = ()
     for ... in 
     while 
 '''
+
 # tuple1 = ()
 # print(type(tuple1))
 
