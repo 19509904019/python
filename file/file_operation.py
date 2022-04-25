@@ -38,9 +38,9 @@ w:输出
     readlines(): 读取所有的行保存到列表中
     readable() : 判断是否可读
 '''
-# stream = open(r'C:\Users\12414\Desktop\score.txt','r',encoding='UTF-8')  #当成是一个管道，暂存文件的内容
-# # container = stream.read()
-# # print(container)
+# stream = open(r'C:\Users\12414\Desktop\score.txt', 'r', encoding='UTF-8')  # 当成是一个管道，暂存文件的内容
+# container = stream.read()
+# print(container)
 
 
 # result = stream.readable()  #判断文件是否可读 True False
@@ -58,7 +58,7 @@ w:输出
 
 
 '''
-w ：写文件，即修改文件,每次都会将内容清空
+w ：写文件,即修改文件,每次都会将内容清空
 write(写内容)  每次都会将原来的内容清空，然后写当前的内容
 writelines(Iterable)  没有换行效果
 stream.writelines(['字符1 \n','字符2 \n','字符3 \n','字符4 \n','字符5 \n'...])
@@ -70,8 +70,8 @@ stream.writelines(['字符1 \n','字符2 \n','字符3 \n','字符4 \n','字符5 
 
 # stream = open(r'C:\Users\12414\Desktop\score.txt','w',encoding='UTF-8')
 
-# # result = stream.writable()
-# # print(result)
+# result = stream.writable()
+# print(result)
 
 # # string = '今天是2022 - 3 - 27 \n又是学习的一天'
 # # result = stream.write(string)
@@ -127,18 +127,18 @@ path1 = os.path.join(path,'命名文件名')  返回的是一个拼接后的新�
 #     # filename = file_path[file_path.rfind('\\')+1:]  # 文件名称
 #     filename_split = os.path.split(file_path)
 #     filename = filename_split[1]
-#     path1 = os.path.join(path, filename)  # 对地址进行拼接
+#     path1 = os.path.join(path, filename)  # 对路径进行拼接
 
 #     with open(path1,'wb') as wstream:
 #         wstream.write(container)
 
-# with open(r'D:\python_learning\file\yan.jpg','rb') as stream:
+# with open(r'C:\Users\12414\Desktop\yan.jpg', 'rb') as stream:
 #     container = stream.read()
-#     path = os.path.dirname(__file__)  #文件所在路径
-#     filename = os.path.split(stream.name)[1]  #文件名称
-#     path1 = os.path.join(path,filename)  #路径拼接
-#     # print(path1)
-#     with open(path1,'wb') as wstream:
+#     path = os.path.dirname(__file__)  # 文件所在路径
+#     filename = os.path.split(stream.name)[1]  # 文件名称
+#     fullname = os.path.join(path, filename)  # 路径拼接
+#     # print(fullname)
+#     with open(fullname, 'wb') as wstream:
 #         wstream.write(container)
 
 '''
@@ -155,10 +155,10 @@ isfile()
 isdir()
 
 '''
-# path = r'D:\python_learning\file\yan.jpg'
+path = r'D:\python_learning\file\yan.jpg'
 
 # result = os.path.split(path)[1]  #分割文件名与路径
-# print(result)    
+# print(result)
 
 # result = os.path.splitext(path)[1]  #分割文件与扩展名
 # print(result)
@@ -187,23 +187,23 @@ os.chdir()  # 切换目录
 # dir = os.getcwd()
 # print(dir)
 
-# all = os.listdir(r'C:\Users\Dell\Desktop\p1')  # 返回指定目录下的所有文件和文件夹，保存到列表中
+# all = os.listdir(r'C:\Users\12414\Desktop\汇总')  # 返回指定目录下的所有文件和文件夹，保存到列表中
 # print(all)
 
 # 创建文件夹
 # os.mkdir(r'C:\Users\Dell\Desktop\p2')
-# if not os.path.exists(r'C:\Users\Dell\Desktop\p2'):
-#     os.mkdir(r'C:\Users\Dell\Desktop\p2')
+# if not os.path.exists(r'C:\Users\12414\Desktop\p2\p1'):
+#     os.mkdir(r'C:\Users\12414\Desktop\p2\p1')
 
 # 删除文件夹
-# os.rmdir(r'C:\Users\Dell\Desktop\p2')   # 只删除空的文件夹
+# os.rmdir(r'C:\Users\12414\Desktop\p2\p1')   # 只删除空的文件夹
 
 # os.removedirs(r'C:\Users\Dell\Desktop\p1\p2')  # 最后一个子目录
 
 # 删除文件
-# os.remove(r'C:\Users\Dell\Desktop\p1\p2')  # 只能删除文件
+# os.remove(r'C:\Users\12414\Desktop\p2')  # 只能删除文件
 
-# path = r'C:\Users\Dell\Desktop\p1\p2'
+# path = r'C:\Users\12414\Desktop\p2'
 # filelist = os.listdir(path)  # ['123.txt']
 # print(filelist)
 # for file in filelist:
