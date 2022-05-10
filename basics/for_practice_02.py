@@ -12,7 +12,7 @@
 """
 import random
 
-#初始化
+# 初始化
 coins = 0  # 记录金币数
 total = 0  # 记录两个骰子总数和
 count = 0  # 记录玩的局数
@@ -60,6 +60,5 @@ if coins < 5:
         # 记录局数
         count += 1
         answer = input("是否继续游戏(y/n):")
-
 
     print("游戏结束,您一共玩了%d局,剩余金币数为%d枚。" % (count, coins))

@@ -10,7 +10,7 @@ import random
 # 计数
 c_count = 0  # 计算机赢的次数
 p_count = 0  # 人赢的次数
-count = 0 #猜拳次数
+count = 0  # 猜拳次数
 while count <= 2:
     # 猜拳
     computer = random.randint(0, 2)
