@@ -118,19 +118,21 @@ path = os.path.dirname(__file__) 获取当前文件所在的文件目录（绝�
 path1 = os.path.join(path,'命名文件名')  返回的是一个拼接后的新的路径
 '''
 
-# 复制文件到当前路径下
-# with open(r'C:\Users\12414\Desktop\yan.jpg', 'rb') as stream:
+# # 复制文件到当前路径下
+# with open(r'D:\python_learning\file\yan.jpg', 'rb') as stream:
 #     container = stream.read()  # 读取文件内容
-
+#
 #     path = os.path.dirname(__file__)  # 本地文件路径
+#     # print(path)
 #     file_path = stream.name
-#     # filename = file_path[file_path.rfind('\\')+1:]  # 文件名称
+#     # print(file_path)
+#     # # filename = file_path[file_path.rfind('\\')+1:]  # 文件名称
 #     filename_split = os.path.split(file_path)
 #     filename = filename_split[1]
-#     path1 = os.path.join(path, filename)  # 对路径进行拼接
-
-#     with open(path1,'wb') as wstream:
-#         wstream.write(container)
+# #     path1 = os.path.join(path, filename)  # 对路径进行拼接
+#
+# #     with open(path1,'wb') as wstream:
+# #         wstream.write(container)
 
 # with open(r'C:\Users\12414\Desktop\yan.jpg', 'rb') as stream:
 #     container = stream.read()
@@ -252,6 +254,7 @@ target_path = r'C:\Users\Dell\Desktop\p2'
 
 
 '''文件中还有文件夹  采用递归调用'''
+
 
 # def copy(src, target):
 #     if os.path.isdir(src) and os.path.isdir(target):
