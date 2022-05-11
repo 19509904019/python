@@ -92,7 +92,7 @@ except:
 # fun()
 
 
-# 情况2
+# # 情况2
 # def fun():
 #     try:
 #         n1 = int(input("输入第一个数字："))
@@ -123,8 +123,8 @@ except:
 # fun()
 
 
-# 情况3
-
+# # 情况3
+#
 # def fun():
 #     try:
 #         n1 = int(input("输入第一个数字："))
@@ -152,7 +152,7 @@ except:
 #         print("出错了，错误是：", e)
 #
 #     else:
-#         print("结果是：", result)   #此段代码不执行
+#         print("结果是：", result)   #return语句执行时，此段代码不执行
 #
 #
 # fun()
@@ -184,20 +184,20 @@ except:
 """
 
 
-# 注册  用户名必须6位
-
-def register():
-    username = input("输入用户名：")
-    if len(username) < 6:
-        raise Exception("用户长度必须6位以上！")
-    else:
-        print("输入的用户名是：", username)
-
-
-try:
-    register()
-except Exception as e:
-    print(e)
-    print("注册失败！")
-else:
-    print("注册成功！")
+# # 注册  用户名必须6位
+#
+# def register():
+#     username = input("输入用户名：")
+#     if len(username) < 6:
+#         raise Exception("用户长度必须6位以上！")
+#     else:
+#         print("输入的用户名是：", username)
+#
+#
+# try:
+#     register()
+# except Exception as e:
+#     print(e)
+#     print("注册失败！")
+# else:
+#     print("注册成功！")
