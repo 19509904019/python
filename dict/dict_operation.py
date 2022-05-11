@@ -17,7 +17,7 @@
          如果字典中存在键，则是修改
 '''
 dict = {}
-print(type(dict))
+# print(type(dict))
 
 dict['name'] = '阿燕'
 dict['gender'] = '女'
@@ -67,16 +67,16 @@ for i in dict:
 # value = dict.get('age')
 # print(value)
 
-# keys()
-for i in dict.keys():
-    print(i)
-# values()
-for i in dict.values():
-    print(i)
-# items()
-for i in dict.items():
-    print(i)
+# # keys()
+# for i in dict.keys():
+#     print(i)
+# # values()
+# for i in dict.values():
+#     print(i)
+# # items()
+# for i in dict.items():
+#     print(i)
 # 把括号给去掉
-for i, j in dict.items():
-    print(i, j)
+# for i, j in dict.items():
+#     print(i, j)
 

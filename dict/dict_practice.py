@@ -69,7 +69,7 @@ books = []  能放多本书
 books = []
 
 while True:
-    msg = input("请依次输入书籍名称，作者，价格（以空格分隔）：").split(" ")
+    msg = input("请依次输入书籍名称，作者，价格（以空格分隔）：").split(" ")  # 列表
     for book in books:
         # 判断书籍是否已经存在
         if msg[0] in book.get('bookname'):
