@@ -120,7 +120,7 @@ list = ['面包', '辣条', '辣条', '方便面', '火腿肠']
 
 '''
 修改
-insert(index,element)：按index插入元素
+insert(index,element):按index插入元素
 replace(old,new,count):按原来的元素替换新元素
 index(element):根据元素找该元素的位置下标，返回值是下标
 clear():清空列表元素
@@ -154,22 +154,26 @@ sort:默认升序  可以通过reverse参数控制升序还是降序
 reverse:翻转
 '''
 
-# 生成8个1-20之间的随机数，保存到列表中，遍历打印
+# # 生成8个1-20之间的随机数，保存到列表中，遍历打印
 # import random
-
-# #存放随机数
+#
+# # #存放随机数
 # numbers = []
-
+#
 # for i in range(8):
-#     ran = random.randint(1,20)
+#     ran = random.randint(1, 20)
 #     numbers.append(ran)
-
+#
 # print(numbers)
 
-# #升序排列
-# numbers.sort(reverse = True)
+# # 升序排列
+# numbers.sort()
+# print(numbers)
+#
+# # 降序排列
+# numbers.sort(reverse=True)
 # print(numbers)
 
-# #reverse只是单纯的翻转
+# # reverse只是单纯的翻转
 # numbers.reverse()
 # print(numbers)

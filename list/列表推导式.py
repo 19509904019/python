@@ -26,8 +26,8 @@ Description:
 # print(list)
 
 # 取出英文字符
-# list = ['1','hello','2','world','3','5']
-# list1 = [i for i in list if i.isalpha()]
+# list = ['1','hello','2','world','3.5','5']
+# list1 = [i for i in list if i.isdigit()]
 # print(list1)
 
 # #格式3 [结果1 if 条件 else 结果2 for 变量 in 可迭代的]
@@ -42,7 +42,7 @@ Description:
 
 # # 请写出一段 python 代码实现分组一个list里面的元素，比如[1,2,3,4....100]变成[[1,2,3],[4,5,6]...] :切片
 # a = [i for i in range(1,101)]
-# # print(a)
+# print(a)
 # b = [a[i:i+3] for i in range(0,len(a),3)]  #巧妙利用步长和切片
 # print(b)
 
@@ -63,6 +63,6 @@ Description:
 # print(newlist)
 
 # list1 = [[1,2,3],[4,5,6],[7,8,9],[1,3,5]]   ----> [3,6,9,5
-list1 = [[1,2,3],[4,5,6],[7,8,9],[1,3,5]]
-new_list  =[i[-1] for i in list1]
-print(new_list)
+# list1 = [[1,2,3],[4,5,6],[7,8,9],[1,3,5]]
+# new_list  =[i[-1] for i in list1]
+# print(new_list)
