@@ -31,7 +31,6 @@ def 原函数():
 主要看return，return后面接的函数就是装饰函数
 '''
 
-
 '''
 带参数的装饰器：
 如果原函数有参数则装饰器内部函数也要有参数
@@ -41,16 +40,19 @@ def 原函数():
 装饰器修饰有返回值的函数
 原函数有返回值，装饰器的内部函数也要有返回值
 '''
+
+
+# 装饰器就是为了给函数添加新的功能，所以第一步就要调用函数
 def decorator(func):
-    def wrapper(*args,**kwargs):
-        r= func(*args,**kwargs)
+    def wrapper(*args, **kwargs):
+        r = func(*args, **kwargs)
         print("预计装修费用是：{}元".format(r))
         print("刷漆")
         print("铺地板")
         print("买家具")
         print("精装修房子")
         return 60000
-    
+
     return wrapper
 
 
@@ -59,5 +61,6 @@ def house():
     print("我是一个毛坯房...")
     return 50000
 
-price = house()  #house()就是wrapper  wrapper没有返回值所以为None
-print(price)
+
+price = house()  # house()就是wrapper  wrapper没有返回值所以为None
+# print(price)
