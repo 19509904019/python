@@ -161,7 +161,7 @@ def leave():
 #         if plate_numbers in car.keys():
 #             # 结束时间
 #             end = time.time()
-#             time_record = car.get(plate_numbers)
+#             time_record = car.get(plate_numbers)  # 获得车牌所对应的时间，这是一个列表
 #             time_record.append(end)
 #             # 停车时长
 #             differential = time_record[1] - time_record[0]

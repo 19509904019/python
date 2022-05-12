@@ -74,5 +74,5 @@ print(list(result))
 result = reduce(lambda x, y: x + y, [1, 2, 3, 4, 5])
 print(result)
 
-# zip
-reuslt = zip()
+# # zip
+# reuslt = zip()

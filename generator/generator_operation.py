@@ -46,19 +46,19 @@ next()是系统的函数
 __next__()是生成器的方法
 '''
 
-
+#
 # def fibonacci(length):
 #     a, b = 0, 1
 #     for i in range(length):
 #         a, b = b, a + b
 #         yield a
-#     return '没有更多元素'  # return就是得到的错误提示信息
+# return '没有更多元素'  # return就是得到的错误提示信息
 #
 #
 # x = fibonacci(10)  # <class 'generator'>
 # print(list(x))
 # try:
-#     for i in range(11):
+#     for i in range(20):
 #         print(next(x), end=' ')
 # except Exception as e:
 #     print()
@@ -71,24 +71,25 @@ __next__()是生成器的方法
     send(value):向每次生成器调用中传值  注意：第一次调用send(None)
 '''
 
-# def gen():
-#     i = 0
-#     while i < 5:
-#         temp = yield i  # 暂停和扔出值
-#         print("temp:", temp)
-#         i += 1
-#
-#     return '没有更多的数据'
-#
-#
-# g = gen()
-# # print(type(g))
-# g.send(None)
-# n1 = g.send("哈哈")  # 生成器会提供一个接口来传值，但原本的赋值不变
-# print("n1:", n1)
-# n2 = g.send("嘻嘻")
-# print("n2:", n2)
 
+def gen():
+    i = 0
+    while i < 5:
+        temp = yield i  # 暂停和扔出值
+        print(i)
+        print("temp:", temp)
+        i += 1
+
+    return '没有更多的数据'
+
+
+g = gen()
+# print(type(g))
+g.send(None)
+n1 = g.send("哈哈")  # 生成器会提供一个接口来传值，但原本的赋值不变
+print("n1:", n1)
+n2 = g.send("嘻嘻")
+print("n2:", n2)
 
 '''
 进程 > 线程 > 协程
@@ -97,8 +98,7 @@ __next__()是生成器的方法
 比如同时下载三个视频，每个视频交替下载
 '''
 
-
-# 搬一块砖听一首歌
+# # 搬一块砖听一首歌
 # def task1(n):
 #     for i in range(n):
 #         print("正在搬第{}块砖...".format(i + 1))
@@ -120,5 +120,3 @@ __next__()是生成器的方法
 #         next(g2)
 #     except:
 #         break
-
-
