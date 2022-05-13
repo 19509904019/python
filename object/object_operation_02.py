@@ -86,7 +86,7 @@ class Student:
     #     return self.__age
     #     # return self.__score
 
-    # 现有getxxx
+    # 先有getxxx
     @property
     def age(self):
         return self.__age
