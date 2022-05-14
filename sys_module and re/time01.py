@@ -7,12 +7,13 @@ import time
 
 # 起始时间
 t = time.time()
+time.sleep(1)
 # 终止时间
 t1 = time.time()
 # 时间差
 t2 = t1 - t
 print(t)
-# print(t2)
+print(t2)
 print('-' * 50)
 
 # 将时间转换成字符串
@@ -38,8 +39,8 @@ print(s)
 print('-' * 50)
 
 # 将字符串转成元组的方式
-r = time.strptime('2022-04-12', '%Y/%m/%d \n')
-print(r)
+# r = time.strptime('2022-04-12', '%Y/%m/%d \n')
+# print(r)
 
 '''
 time模块：

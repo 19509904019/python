@@ -22,7 +22,7 @@ print(md5)
 print(md5.hexdigest())  # 加密 9d2525ddd6257caf3bebfed73d0685b0
 
 sha256 = hashlib.sha256(msg.encode("UTF-8"))
-print(sha256.hexdigest())
+print(sha256.hexdigest()) # 6f09fa61833ffa7ef3645b8a160e28c9a606f7a3d363ce2a7b1f8281db3cedba
 
 # 用户登录
 list1 = []

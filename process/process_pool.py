@@ -17,50 +17,7 @@ pool.apply_async() 非阻塞式
 pool.close()
 pool.join()   给主进程让步
 """
-# #非阻塞式
-# import os
-# from multiprocessing import Pool
-# import time
-# import random
-#
-#
-# def task(task_name):
-#     print("开始做任务了...", task_name)
-#     start = time.time()
-#     # 使用sleep
-#     time.sleep(random.random() * 2)
-#     end = time.time()
-#     return '完成任务：{}  用时：{}  进程id：{}'.format(task_name, (end - start), os.getpid())
-#
-#
-# container = []
-#
-#
-# def callback_func(n):
-#     """
-#
-#     :param n: task函数返回的值作为参数
-#     :return:
-#     """
-#     container.append(n)
-#
-#
-# if __name__ == "__main__":
-#     pool = Pool(5)
-#
-#     tasks = ['music', 'game', 'video', 'study', 'cook', 'eat', 'break']
-#     for i in tasks:
-#         pool.apply_async(task, args=(i,), callback=callback_func)  # arg参数给task
-#     pool.close()  # 添加任务结束
-#     pool.join()
-#
-#     for c in container:
-#         print(c)
-#
-#     print("over!!!")
-
-
-# 阻塞式
+# 非阻塞式
 import os
 from multiprocessing import Pool
 import time
@@ -73,8 +30,7 @@ def task(task_name):
     # 使用sleep
     time.sleep(random.random() * 2)
     end = time.time()
-    print('完成任务：{}  用时：{}  进程id：{}'.format(task_name, (end - start), os.getpid()))
-    # return '完成任务：{}  用时：{}  进程id：{}'.format(task_name, (end - start), os.getpid())
+    return '完成任务：{}  用时：{}  进程id：{}'.format(task_name, (end - start), os.getpid())
 
 
 container = []
@@ -90,13 +46,56 @@ def callback_func(n):
 
 
 if __name__ == "__main__":
-    # 进程池容量
     pool = Pool(5)
 
-    tasks = ['music', 'game', 'video', 'study', 'cook', 'eat', 'relax']
+    tasks = ['music', 'game', 'video', 'study', 'cook', 'eat', 'break']
     for i in tasks:
-        pool.apply(task, args=(i,))  # arg参数给task
+        pool.apply_async(task, args=(i,), callback=callback_func)  # arg参数给task
     pool.close()  # 添加任务结束
     pool.join()
 
+    for c in container:
+        print(c)
+
     print("over!!!")
+
+# # 阻塞式
+# import os
+# from multiprocessing import Pool
+# import time
+# import random
+#
+#
+# def task(task_name):
+#     print("开始做任务了...", task_name)
+#     start = time.time()
+#     # 使用sleep
+#     time.sleep(random.random() * 2)
+#     end = time.time()
+#     print('完成任务：{}  用时：{}  进程id：{}'.format(task_name, (end - start), os.getpid()))
+#     # return '完成任务：{}  用时：{}  进程id：{}'.format(task_name, (end - start), os.getpid())
+#
+#
+# container = []
+#
+#
+# def callback_func(n):
+#     """
+#
+#     :param n: task函数返回的值作为参数
+#     :return:
+#     """
+#     container.append(n)
+#
+#
+# if __name__ == "__main__":
+#     # 进程池容量
+#     pool = Pool(5)
+#
+#     tasks = ['music', 'game', 'video', 'study', 'cook', 'eat', 'relax']
+#     for i in tasks:
+#         pool.apply(task, args=(i,))  # arg参数给task
+#     pool.close()  # 添加任务结束
+#     pool.join()
+#
+#     print("over!!!")

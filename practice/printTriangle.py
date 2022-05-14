@@ -63,7 +63,6 @@ layer = int(input("请输入所要打印的层数："))
 #     print()
 
 for i in range(layer):
-    
     for j in range(layer):
         print("*",end=" ")
     layer -= 1

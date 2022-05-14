@@ -34,13 +34,13 @@ def download(q):
     for image in images:
         print("正在下载：", image)
         sleep(0.5)
-        q.put(image, timeout=1)
+        q.put(image, timeout=1)  # 放入队列
 
 
 def getfile(q):
     while True:
         try:
-            file = q.get(timeout=2)
+            file = q.get(timeout=2)  # 从队列中取值
             print(f"{file}保存成功！")
         except:
             print("全部保存完毕！")

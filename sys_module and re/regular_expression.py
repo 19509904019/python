@@ -63,7 +63,7 @@ print(result.group())
 
 result = re.findall('[a-z][0-9]', msg)  # findall匹配整个字符串，找到一个继续向下找，一直到字符串结尾
 print(result)
-'''
+r'''
 正则符号
 1.[]表示是一个范围
 2."."用于匹配除换行符（\n）之外的所有字符
@@ -106,6 +106,7 @@ print(result)
 QQ = '1241412075'
 result = re.match('^[1-9][0-9]{4,10}$', QQ)
 print(result)
+print(result.group())
 
 # 用户名可以是字母或者数字，不能是数字开头，用户名长度必须6位以上[0-9 a-z A-Z]
 username = 'admin1444'

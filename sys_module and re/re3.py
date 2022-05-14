@@ -48,7 +48,7 @@ result = re.sub(r'\d+', func, 'java:100,python:100')
 print(result)
 
 msg = 'java:98,python:98'
-result = re.split(r'[,:]', msg)
+result = re.split(r'[:,]', msg)
 print(result)
 
 """

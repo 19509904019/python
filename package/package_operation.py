@@ -38,6 +38,6 @@ from user import *
 user.creat_app()
 user.printA()
 
-# __all__ = ['a']  a可以调用而b不可以调用
-a.show()
+# __all__ = ['a']  # a可以调用而b不可以调用
+# a.show()
 # b.show()
