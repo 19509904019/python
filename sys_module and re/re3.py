@@ -70,7 +70,7 @@ result = re.match(r'<img src="(.+?)"', path)
 # print(result.group(1))
 
 image_path = result.group(1)
-
+print(image_path)
 response = requests.get(image_path)
 
 with open('aa.jpg', 'wb') as wstream:
