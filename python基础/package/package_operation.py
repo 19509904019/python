@@ -33,7 +33,6 @@ from 包 import *
 
 '''
 import user
-from user import *
 
 user.creat_app()
 user.printA()

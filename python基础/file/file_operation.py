@@ -157,7 +157,7 @@ isfile()
 isdir()
 
 '''
-path = r'D:\python_learning\file\yan.jpg'
+path = r'/python基础/file/yan.jpg'
 
 # result = os.path.split(path)[1]  #分割文件名与路径
 # print(result)
